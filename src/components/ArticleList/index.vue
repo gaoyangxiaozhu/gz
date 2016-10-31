@@ -23,4 +23,8 @@ export default {
 </script>
 
 <style lang="sass">
+.article-item{
+    margin-top: 2.5rem;
+    border-bottom: 1px solid #eef2f8;
+}
 </style>

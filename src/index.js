@@ -4,6 +4,8 @@ import configRouter from './routes.js'
 import App from './components/App.vue'
 import 'font-awesome/css/font-awesome.css'
 
+import './assets/css/index.scss'
+
 import {
     loadJSON,
     setConfig

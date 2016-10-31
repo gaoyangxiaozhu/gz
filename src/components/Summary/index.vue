@@ -41,5 +41,33 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="sass">
+@import "../../assets/css/variable";
+
+.summary{
+    > .summary-header{
+        .summary-header-title{
+            color: $base-title-link-color;
+            a{
+                color: $base-title-link-color;
+                &:hover{
+                    color: darken($base-title-link-color, 10%);
+                }
+            }
+        }
+    }
+    > .summary-meta{
+        color: $text-muted-color;
+        font-size: 1.25rem;
+        time,
+        span,
+        a{
+             color: $text-muted-color;
+             &:hover{
+                 color: darken($base-title-link-color, 5%);
+             }
+         }
+    }
+
+}
 </style>
