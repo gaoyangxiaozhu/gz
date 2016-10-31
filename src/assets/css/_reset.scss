@@ -1,0 +1,80 @@
+body,
+html{
+    background-color: $base-bg-color;
+    font-family: "open_sans", "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 62.5%; /* 10 / 16 * 100% , default 10px*/
+}
+body{
+    padding: 0;
+
+    letter-spacing: .01em;
+    font-size: 1.5rem;
+    line-height: 1.85em;
+
+    font-smoothing: subpixel-antialiased;
+}
+p{
+    font-size: 16px;
+    color: $base-font-color;
+
+    margin-bottom: 1.6rem;
+
+}
+
+h1,
+h2,
+h3,
+h4{
+    margin-bottom: 5px;
+    margin-top: 0px;
+    letter-spacing: -.04em;
+    font-family: 'Open Sans',sans-serif;
+    line-height: 1.45em;
+    color: $base-title-color;
+}
+h1,
+h2{
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+h3,
+h4{
+    font-size: 1.8rem;
+    font-weight: 500px;
+}
+ul,
+ol{
+    list-style: none;
+    padding-left: 0;
+    li{
+        list-style: none;
+    }
+}
+
+a,
+a:focus,
+a:active,
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+a{
+    color: $base-link-color;
+    &:focus,
+    &:active,
+    &:hover{
+        color: $base-link-hover-color;
+    }
+}
+
+button,
+button:hover,
+button:active,
+button:focus,
+input,
+input:hover,
+input:active,
+input:focus
+textarea{
+    outline: none;
+}

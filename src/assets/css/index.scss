@@ -1,0 +1,93 @@
+@import 'variable';
+@import 'reset';
+@import 'font';
+
+
+
+//pagination
+
+.pagination {
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    padding: 0 6px;
+    overflow: hidden;
+    border-radius: 0;
+
+    > a,
+    > span,
+    > li > a,
+    > li > span,
+    > div > a,
+    > div > span{
+        display:  inline-block;
+
+        background-color: $pagination-bg-color;
+        border: 1px solid $pagination-bd-color;
+        color: $pagination-color;
+        border-radius: 0;
+
+        cursor: pointer;
+    }
+    // page button group style
+    > li {
+        > a,
+        > span{
+            border-radius: 4px;
+        }
+      &:first-child,
+      &:last-child{
+          > a,
+          > span{
+              border-radius: 0;
+          }
+      }
+
+    }
+    // page prev next style
+    > div{
+        &.prev{
+            float: left;
+        }
+        &.next{
+            float: right;
+        }
+        > a,
+        > span{
+            padding: 8px 14px;
+            border-radius: 4px;
+        }
+    }
+    > .active > a,
+    > .active > span {
+      &{
+          background-color: $pagination-bg-color;
+          border: 1px solid $pagination-bd-color;
+          color: $pagination-color;
+      }
+      &:hover,
+      &:focus,
+      &:active{
+          background-color: $pagination-active-bg-color;
+          border-color: $pagination-active-bd-color;
+          color: $pagination-active-color;
+
+          cursor: pointer;
+      }
+    }
+    > .disabled {
+        > span,
+        > span:hover,
+        > span:focus,
+        > a,
+        > a:hover,
+        > a:focus,
+        > a:active{
+            background-color: $pagination-disable-bg-color;
+            border-color:$pagination-disable-bd-color;
+            color: $pagination-disable-bd-color;
+
+            cursor: pointer;
+      }
+    }
+}

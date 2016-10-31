@@ -1,0 +1,46 @@
+//global
+$base-font-color: #3F4F5A;     //默认段落字体颜色
+$base-title-color: #656D78;    //默认标题字体颜色
+$text-muted-color: #808C94; //默认柔色字体 用于meta说明
+$text-green-color: darken(#65C3AD, 20%);
+
+
+$base-bg-color : #FFFFFF;        //默认网站背景颜色 #f6f6f6
+$base-bd-color : #d9d9d9;    //默认的边框颜色
+
+$base-container-bg-bolor: white;     //默认面板背景颜色
+
+$base-link-color : #8B4EA4;        //链接颜色#337ab7
+$base-link-hover-color : #6A1A8B; //链接悬浮颜色
+$base-title-link-color : #4a4a4a;        //标题链接颜色
+
+
+$base-title-hover-color : black;  //标题链接悬浮颜色
+
+/************navbar*************/
+//color
+$nav-bg-color: #3e474e;
+$nav-bd-color: #f49484;
+
+$navbar-bg-color:#FFFFFF;
+$navbar-link-color: #b9b9b9;
+$navbar-link-hover-color: #000;
+
+
+
+//btn
+$default-btn-color: #ecf0f1;
+$default-btn-bd-color: #ccd1d9; //默认的btn的边框颜色
+$primary-btn-color: #5faee3;
+$blue-btn-color: #4E85F3;
+
+
+//pagination
+$pagination-bg-color : #fff;
+$pagination-bd-color : #9eabb3;
+$pagination-color: #9eabb3;
+$pagination-active-bg-color :#fff;
+$pagination-active-bd-color : darken(#9eabb3, 20%);
+$pagination-active-color: darken(#9eabb3, 20%);
+$pagination-disable-bg-color: $base-bg-color;
+$pagination-disable-bd-color: $base-bd-color;
