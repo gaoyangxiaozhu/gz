@@ -18,6 +18,30 @@ nav{
 
 }
 
+.meta-font-style{
+    color: $text-muted-color;
+    font-size: 1.25rem;
+}
+//btn
+
+button,
+.btn{
+    display: inline-block;
+
+    outline: none;
+    padding: 0px 10px;
+
+    height: 3rem;
+    line-height: 3rem;
+    border-radius: 0.8rem;
+
+    border: 1px solid $base-bd-color;
+
+    margin-bottom: 1rem;
+
+    margin-left: 0.6rem;
+
+}
 //pagination
 
 .pagination {

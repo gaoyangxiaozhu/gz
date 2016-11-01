@@ -17,7 +17,7 @@ export default {
     route:{
         data(transition){
             const page = this.$route.query.page || 0
-            const tag = this.$route.params.tag
+            const tag = this.$route.params.name
             const dataURL = `./async/tags/${tag}${ page > 1 ? '-' + page : ''}.json`
             loadJSON(dataURL)
             .then((data) => {

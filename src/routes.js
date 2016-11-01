@@ -16,13 +16,22 @@ export default function(router){
             name: 'tags',
             component: require('./routes/tags.vue')
         },
-        '/category/:category':{
+        '/category/:name':{
             name: 'category',
             component: require('./routes/category.vue')
         },
-        '/tag/:tag':{
+        '/tag/:name':{
             name: 'tag',
             component: require('./routes/tag.vue')
         }
+    })
+    router.beforeEach(function(transition){
+        // const route = transition.to
+        // const rawURL = decodeURI(route.path)
+        // if(history.replaceState){
+        //     history.replaceState('','', rawURL)
+        // }
+
+        transition.next()
     })
 }

@@ -1,4 +1,16 @@
 //global
+
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+
+
+
+$purple-color: #8B4EA4;
+
+
+
 $base-font-color: #3F4F5A;     //默认段落字体颜色
 $base-title-color: #656D78;    //默认标题字体颜色
 $text-muted-color: #808C94; //默认柔色字体 用于meta说明
@@ -13,8 +25,6 @@ $base-container-bg-bolor: white;     //默认面板背景颜色
 $base-link-color : #8B4EA4;        //链接颜色#337ab7
 $base-link-hover-color : #6A1A8B; //链接悬浮颜色
 $base-title-link-color : #4a4a4a;        //标题链接颜色
-
-
 $base-title-hover-color : black;  //标题链接悬浮颜色
 
 /************navbar*************/
@@ -26,8 +36,13 @@ $navbar-bg-color:#FFFFFF;
 $navbar-link-color: #b9b9b9;
 $navbar-link-hover-color: #000;
 
+//navbar
+$default-navbar-height: 55px;
 
-
+//sidebar
+$default-sidebar-width: 250px;
+$default-lg-sidebar-width : 250px;
+$default-md-sidebar-width: 100px;
 //btn
 $default-btn-color: #ecf0f1;
 $default-btn-bd-color: #ccd1d9; //默认的btn的边框颜色

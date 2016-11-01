@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="main-content-wrap">
         <div>
-            <a v-link="{ name: base , params: { base: item.name }}" v-for="item in data" class="btn btn-primary"> {{ item.name }}</a>
+            <a v-link="{ name: base, params: { name: item.name } }" v-for="item in data" class="btn purple-link"> {{ item.name }}</a>
         </div>
         <div class="content">
             <div  v-for="item in data">
@@ -28,5 +28,13 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="sass" scoped>
+@import "../../assets/css/variable";
+
+.purple-link{
+    border: 1px solid $purple-color !important;
+}
+.content{
+    margin-top: 1.5rem;
+}
 </style>

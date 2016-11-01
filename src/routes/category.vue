@@ -18,8 +18,8 @@ export default {
     route:{
         data(transition){
 
-            const page = this.$router.query.page || 0
-            const category = this.$router.params.category
+            const page = this.$route.query.page || 0
+            const category = this.$route.params.name
             const dataURL = `./async/categories/${category}${ page > 1 ? '-' + page : ''}.json`
             loadJSON(dataURL)
             .then((data) => {
@@ -28,7 +28,7 @@ export default {
                 transition.next()
             })
             .catch((error) => {
-                console.log(error.message)
+                console.log(error)
                 transition.next()
             })
         }

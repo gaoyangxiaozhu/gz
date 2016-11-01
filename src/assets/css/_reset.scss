@@ -19,6 +19,12 @@ body{
 
     font-smoothing: subpixel-antialiased;
 }
+
+html,
+body,
+*{
+    box-sizing: border-box;   
+}
 p{
     font-size: 16px;
     color: $base-font-color;
@@ -37,6 +43,13 @@ h4{
     font-family: 'Open Sans',sans-serif;
     line-height: 1.45em;
     color: $base-title-color;
+
+    a{
+        color: $base-title-link-color;
+        &:hover{
+            color: $base-title-hover-color;
+        }
+    }
 }
 h1,
 h2{

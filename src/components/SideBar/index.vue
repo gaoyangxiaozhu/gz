@@ -19,8 +19,8 @@
             <ul class="sidebar-buttons">
                 <li v-for="button in buttonsmap">
                     <a v-link="{ name: button.routename }">
-                        <i class="fa {{ button.iconclass }}"></i>
-                        {{ button.name}}
+                        <i class="fa {{ button.iconclass }} sidebar-buttons--icon"></i>
+                        <span class="sidebar-buttons--desc">{{ button.name }}</span>
                     </a>
                 </li>
             </ul>
@@ -117,6 +117,18 @@ export default {
                 font-size: 1.4rem;
                 margin: 0;
             }
+            @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
+                .author{
+                    font-size: 1.8rem;
+                }
+                .title{
+                    font-size: 1.3rem;
+
+                }
+                .subtitle{
+                    font-size: 1.3rem;
+                }
+            }
         }
         &--avatar{
             img.avatar{
@@ -126,16 +138,35 @@ export default {
                 border-radius: 50px;
                 margin: auto;
             }
-            padding-top: 40px;
+            padding-top: 60px;
             overflow: hidden;
         }
     }
     .sidebar-buttons{
+
         a{
             color: #626262;
             transition: all .2s ease-in-out;
             &:hover{
                 color: darken(#626262, 10%);
+            }
+        }
+        @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
+            &--icon{
+                font-size: 1.8rem;
+            }
+            &--desc{
+                display: none;
+            }
+            &.friends{
+                display: none;
+            }
+            &.social{
+                padding: 0;
+                li{
+                    margin-left: 0;
+                    width: 100%;
+                }
             }
         }
     }
@@ -156,6 +187,10 @@ export default {
             float: left;
             margin-left: 0.5rem;
             margin-bottom: 1rem;
+            &:first-child{
+                margin-left: 0;
+            };
+            
             > a{
                 display: inline-block;
 
