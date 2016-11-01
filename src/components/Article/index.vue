@@ -8,7 +8,7 @@
                 <div class="post-meta">
                     <time itemprop="articlePublished" datetime="{{ time }}"> {{ time }}</time>
                     <span>in</span>
-                    <a v-link="{name: 'category', params: { category: category.name} }" v-for="category in article.categories">
+                    <a v-link="{name: 'category', params: { name: category.name} }" v-for="category in article.categories">
                         {{ $index > 0 ? category.name+', ': category.name }}
                     </a>
                 </div>
