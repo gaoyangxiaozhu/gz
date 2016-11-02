@@ -50,7 +50,7 @@ export default {
         display: inline-block;
         height: $default-navbar-height;
         line-height: $default-navbar-height;
-        font-size: 3rem;
+        font-size: 2rem;
 
         cursor: pointer;
         float: left;

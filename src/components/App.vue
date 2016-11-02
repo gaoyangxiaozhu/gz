@@ -1,6 +1,6 @@
 <template lang="html">
     <div :class="{'show-side': showSide }">
-        <div id="header">
+        <div id="header" v-bind:style="headStyle">
             <myhead></myhead>
         </div>
         <div id="sidebar">
@@ -14,7 +14,6 @@
         </div>
 
         <div id="onside" @click="toggleSide" :class="{ 'right': !showSide }">
-
             <i class="fa" :class="{ 'fa-desktop' : showSide, 'fa-bars' : !showSide}"></i>
         </div>
         <div id="mask" @click="toggleSide">
@@ -31,7 +30,8 @@ export default {
     created(){},
     data () {
         return {
-            showSide : false
+            showSide : false,
+            headStyle: {}
         }
     },
     computed: {
@@ -39,6 +39,29 @@ export default {
     ready () {
         const pageWidth = document.body.clientWidth || document.documentElement.clientWidth
         this.showSide = parseInt(pageWidth) >= 768 ? true : false
+
+        window.addEventListener('scroll', (event) => {
+            const toTop = parseInt(document.documentElement.scrollTop || document.body.scrollTop)
+            const transformList = [
+                'WebkitTransform',
+                'transform',
+                'MozTransform',
+                'MsTransform',
+                'oTransform'
+            ]
+            if(toTop > 55){
+                transformList.forEach((name) => {
+                    this.headStyle[name] = 'translate(0, -55px)'
+                })
+            }else{
+                transformList.forEach((name) => {
+                    this.headStyle[name] = 'translate(0, 0)'
+                })
+            }
+            // trigger dom  view update
+            this.headStyle = Object.assign({}, this.headStyle)
+        })
+
 
     },
     methods: {
@@ -56,9 +79,17 @@ export default {
 #header{
     display: block;
     height: 55px;
+    width: 100%;
+
+    position: fixed;
     top: 0;
+
+    z-index: 1;
+
     border: 1px solid #eef2f8;
-    z-index: 9999;
+    background-color: #FFFFFF;
+
+    transition: transform .25s ease-in-out;
     @media only screen and (min-width: #{$screen-sm-min}){
         display: none;
     }
@@ -188,6 +219,8 @@ export default {
             top: 0;
             opacity: 0.6;
             pointer-events: all;
+
+            z-index:2;
         }
     }
 
@@ -221,6 +254,7 @@ export default {
     height: 100%;
     background-color: #000;
     opacity: 0;
+
 
     pointer-events: none;
 }
