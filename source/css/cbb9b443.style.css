@@ -905,12 +905,6 @@
               transform: translateX(-250px);
       padding-top: 30px; } }
 
-.main-content-wrap {
-  display: block;
-  width: 750px;
-  margin: auto;
-  padding: 0 20px; }
-
 #sidebar {
   position: fixed;
   top: 0;
@@ -3640,6 +3634,12 @@ textarea {
 nav {
   display: block;
   position: relative; }
+
+.main-content-wrap {
+  display: block;
+  max-width: 750px;
+  margin: auto;
+  padding: 0 20px; }
 
 .meta-font-style {
   color: #808C94;
