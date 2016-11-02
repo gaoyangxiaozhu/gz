@@ -1,6 +1,6 @@
 <template lang="html">
     <div class="post-main main-content-wrap">
-        <article class="post" v-if="article">
+        <article class="post yue" v-if="article">
             <div class="post-header">
                 <h1 class="post-title">
                     {{ article.title }}
@@ -25,6 +25,7 @@
 
 <script>
 
+import '../../lib/yue/yue.css'
 import Duoshuo from '../Duoshuo/'
 import {
     getConfig
