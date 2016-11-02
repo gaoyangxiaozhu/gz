@@ -171,19 +171,18 @@ export default {
 
     transform-origin: right;
     transition: transform .25s ease-in-out;
-    transform: translateZ(0);
 
     //default
-    transform: translateX(-#{$default-sidebar-width});
+    transform: translateZ(0) translateX(-#{$default-sidebar-width});
     width: $default-sidebar-width;
 
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
-        transform: translateX(-#{$default-md-sidebar-width});
+        transform: translateZ(0) translateX(-#{$default-md-sidebar-width});
         width: $default-md-sidebar-width;
     }
 
     @media only screen and (min-width: #{$screen-md-min}){
-        transform: translateX(-#{$default-lg-sidebar-width});
+        transform: translateZ(0) translateX(-#{$default-lg-sidebar-width});
         width: $default-lg-sidebar-width;
     }
 
@@ -231,7 +230,7 @@ export default {
 }
 .show-side{
     #sidebar{
-        transform: translateX(0px);
+        transform: translateZ(0) translateX(0px);
     }
     #main{
         transform: translateX(#{$default-sidebar-width});
@@ -250,13 +249,13 @@ export default {
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         #sidebar,
         #main{
-            transform : translateX(0);
+            transform : translateZ(0) translateX(0);
         }
     }
     @media only screen and (min-width: #{$screen-md-min}){
         #sidebar,
         #main{
-            transform: translateX(0);
+            transform: translateZ(0) translateX(0);
         }
 
     }
