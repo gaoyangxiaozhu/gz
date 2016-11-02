@@ -41,18 +41,18 @@ widgets:
 ## social:
 ##   -
 ##     type: weibo
-##     url: http://weibo.com/lingyucoder/home
+##     url: http://weibo.com/gaoyangxiaozhu/home
 ##   -
 ##     type: github
-##     url: https://github.com/LingyuCoder
+##     url: https://github.com/gaoyangxiaozhu
 ##   -
 ##     type: atom
 ##     url: /atom.xml
 ##   - type: twitter
-##     url: https://twitter.com/LingyuCoder
+##     url: https://twitter.com/gaoyangxiaozhu
 ##   -
 ##     type: facebook
-##     url: https://www.facebook.com/profile.php?id=100005242330932
+##     url: https://www.facebook.com/profile.php?id=XXXXXXXXXXXX
 ##   -
 ##     type: email
-##     url: lingyucoder@gmail.com
+##     url: gyycoder@gmail.com
