@@ -16,7 +16,8 @@
                     {{ subtitle }}
                 </p>
             </div>
-            <ul class="sidebar-buttons">
+            <ul class="sidebar-buttons self-page">
+                <li class="slider"></li>
                 <li v-for="button in buttonsmap">
                     <a v-link="{ name: button.routename }">
                         <i class="fa {{ button.iconclass }} sidebar-buttons--icon"></i>
@@ -143,12 +144,41 @@ export default {
         }
     }
     .sidebar-buttons{
-
+        padding: 0 20px;
         a{
             color: #626262;
             transition: all .2s ease-in-out;
             &:hover{
                 color: darken(#626262, 10%);
+            }
+        }
+        &.self-page .slider{
+            display: none;
+        }
+        @media only screen and (min-width: #{$screen-md-min}){
+            &.self-page{
+                position: relative;
+                .slider{
+                    display: block;
+
+                    position: absolute;
+                    top: 0px;
+                    left: 60px;
+
+                    height: 6px;
+                    width: 6px;
+
+                    transition: transform .15s ease-in-out;
+                    &:before{
+                        content: '';
+                        display: inline-block;
+
+                        border-left: 5px solid #626262;
+                        border-top: 5px solid transparent;
+                        border-bottom: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                    }
+                }
             }
         }
         @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
@@ -169,6 +199,8 @@ export default {
                 }
             }
         }
+
+
     }
     .social{
         padding: 0 2rem;
@@ -190,7 +222,7 @@ export default {
             &:first-child{
                 margin-left: 0;
             };
-            
+
             > a{
                 display: inline-block;
 

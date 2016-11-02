@@ -38,17 +38,19 @@ export default {
     },
     ready () {
         const pageWidth = document.body.clientWidth || document.documentElement.clientWidth
+        const transformList = [
+            'WebkitTransform',
+            'transform',
+            'MozTransform',
+            'MsTransform',
+            'oTransform'
+        ]
+
         this.showSide = parseInt(pageWidth) >= 768 ? true : false
 
         window.addEventListener('scroll', (event) => {
             const toTop = parseInt(document.documentElement.scrollTop || document.body.scrollTop)
-            const transformList = [
-                'WebkitTransform',
-                'transform',
-                'MozTransform',
-                'MsTransform',
-                'oTransform'
-            ]
+
             if(toTop > 55){
                 transformList.forEach((name) => {
                     this.headStyle[name] = 'translate(0, -55px)'
@@ -60,6 +62,25 @@ export default {
             }
             // trigger dom  view update
             this.headStyle = Object.assign({}, this.headStyle)
+        })
+
+
+        // set slider `indicate` effect when client width > 992
+        // in other words, make `Home, Categories, Tags` change effect in sidebar when client width > 992
+        const selfPageBtn = document.querySelector('.sidebar-buttons.self-page')
+        const btnList = [].slice.call(selfPageBtn.querySelectorAll('li'), 0)
+        let slider = selfPageBtn.querySelector('li.slider')
+
+        selfPageBtn.style.position = 'relative'
+        selfPageBtn.addEventListener('click', (event) => {
+            const target = event.target
+            btnList.forEach((item, index) => {
+                if(target == item || target.parentNode == item || (target.parentNode && target.parentNode.parentNode == item)){
+                    transformList.forEach((name) => {
+                        slider['style'][name] = `translate(0, ${item.offsetTop}px)`
+                    })
+                }
+            })
         })
 
 
