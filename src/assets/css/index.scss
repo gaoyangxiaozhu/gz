@@ -15,7 +15,17 @@ nav{
 
 
 }
+.main-content-wrap{
 
+    display: block;
+
+    max-width: 750px;
+    margin: auto;
+
+    padding: 0 20px;
+
+
+}
 .meta-font-style{
     color: $text-muted-color;
     font-size: 1.25rem;

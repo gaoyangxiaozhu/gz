@@ -142,17 +142,6 @@ export default {
 
 
 }
-.main-content-wrap{
-
-    display: block;
-
-    width: 750px;
-    margin: auto;
-
-    padding: 0 20px;
-
-
-}
 
 #sidebar{
     position: fixed;

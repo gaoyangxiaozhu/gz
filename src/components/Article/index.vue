@@ -1,6 +1,6 @@
 <template lang="html">
     <div class="post-main main-content-wrap">
-        <article class="post yue" v-if="article">
+        <article class="post" v-if="article">
             <div class="post-header">
                 <h1 class="post-title">
                     {{ article.title }}
@@ -13,7 +13,7 @@
                     </a>
                 </div>
             </div>
-            <div class="post-content">
+            <div class="post-content yue">
                 {{{ article.content }}}
             </div>
             <div class="post-comment">
