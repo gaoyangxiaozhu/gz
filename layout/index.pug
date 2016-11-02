@@ -4,6 +4,9 @@ head
     meta(charset="UTF-8")
     title= config.title
     meta(name='viewport' content='width=device-width, inital-scale=1, maximum-scale=1')
+    //- inject:css
+    link(rel="stylesheet", href="/source/css/c478a811.style.css")
+    //- endinject
     if theme.favicon
         link(rel="icon" href="#{theme.favicon}")
     if theme.baidu_tongji
@@ -18,4 +21,6 @@ head
             })
 body
     div#blog
-    script(type="text/javascript" src="js/blog.js")
+    //- inject:js
+    script(src="/source/blog.js")
+    //- endinject

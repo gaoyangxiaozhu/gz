@@ -1,6 +1,7 @@
 import path from 'path'
 import gulp from 'gulp'
 import gutil from 'gulp-util'
+import inject from 'gulp-inject'
 import WebpackDevServer from "webpack-dev-server"
 import webpack from "webpack"
 import del from 'del'
@@ -31,8 +32,16 @@ gulp.task('serve', cb =>{
       cb()
   })
 })
-gulp.task('clean', cb => del(path.join(__dirname, 'source'), cb))
-gulp.task('build', ['clean', 'webpack'])
+gulp.task('clean', cb => del([path.join(__dirname, 'source'), path.join(__dirname, 'layout')], cb))
+gulp.task('build', ['clean', 'webpack'], () =>{
+    gulp.src('./src/index.pug')
+    .pipe(inject(gulp.src(['./source/blog.js', './source/**/*.css'], {read: false})), {
+        transform: function(filepath) {
+            return filepath.replace(/\/source\//i, '')
+        }
+    })
+    .pipe(gulp.dest('layout/'))
+})
 gulp.task('default', ['build'])
 gulp.task('webpack', cb => {
   let webpackConfig = require('./webpack.config.js')

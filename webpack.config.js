@@ -14,17 +14,13 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'source'),
-    filename: 'js/blog.js',
+    filename: 'blog.js',
     publicPath: '/'
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src/index.html'),
-      inject: true
-    }),
     new ExtractTextPlugin('css/[hash:8].style.css', { allChunks: true })
   ],
   module: {
