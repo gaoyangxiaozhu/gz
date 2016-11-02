@@ -1,5 +1,5 @@
 <template lang="html">
-    <div :class="{'show-side': showSide }">
+    <div :class="{'show-side': showSide }" v-cloak>
         <div id="header" v-bind:style="headStyle">
             <myhead></myhead>
         </div>
@@ -47,6 +47,7 @@ export default {
         ]
 
         this.showSide = parseInt(pageWidth) >= 768 ? true : false
+
 
         window.addEventListener('scroll', (event) => {
             const toTop = parseInt(document.documentElement.scrollTop || document.body.scrollTop)
@@ -157,7 +158,7 @@ export default {
     position: fixed;
     top: 0;
     height: 100%;
-    overflow-y: auto;
+    overflow: auto;
 
     text-align: center;
     font-size: 1.6rem;
@@ -170,6 +171,7 @@ export default {
 
     transform-origin: right;
     transition: transform .25s ease-in-out;
+    transform: translateZ(0);
 
     //default
     transform: translateX(-#{$default-sidebar-width});
@@ -189,7 +191,7 @@ export default {
 }
 #onside{
 
-    position: absolute;
+    position: fixed;
 
     top: 30px;
     left: 200px;
