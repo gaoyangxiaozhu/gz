@@ -259,13 +259,13 @@ export default {
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         #sidebar,
         #main{
-            transform : translateZ(0) translate(0, 0);
+            transform : translate3d(0, 0, 0);
         }
     }
     @media only screen and (min-width: #{$screen-md-min}){
         #sidebar,
         #main{
-            transform: translateZ(0) translated(0, 0);
+            transform: translate3d(0, 0, 0);
         }
 
     }
