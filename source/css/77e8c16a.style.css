@@ -1020,14 +1020,14 @@
 @media only screen and (max-width: 992px) and (min-width: 768px) {
   .show-side #sidebar,
   .show-side #main {
-    -webkit-transform: translateZ(0) translate(0, 0);
-            transform: translateZ(0) translate(0, 0); } }
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
 
 @media only screen and (min-width: 992px) {
   .show-side #sidebar,
   .show-side #main {
-    -webkit-transform: translateZ(0) translated(0, 0);
-            transform: translateZ(0) translated(0, 0); } }
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
 
 #footer {
   color: #9eabb3;
