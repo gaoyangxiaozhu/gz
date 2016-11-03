@@ -50,18 +50,20 @@ export default {
 
         window.addEventListener('scroll', (event) => {
             const toTop = parseInt(document.documentElement.scrollTop || document.body.scrollTop)
+            if(!this.showSide){
+                if(toTop > 55){
+                    transformList.forEach((name) => {
 
-            if(toTop > 55){
-                transformList.forEach((name) => {
-                    this.headStyle[name] = 'translate(0, -55px)'
-                })
-            }else{
-                transformList.forEach((name) => {
-                    this.headStyle[name] = 'translate(0, 0)'
-                })
+                        this.headStyle[name] = 'translateY(-55px)'
+                    })
+                }else{
+                    transformList.forEach((name) => {
+                        this.headStyle[name] = ''
+                    })
+                }
+                // trigger dom  view update
+                this.headStyle = Object.assign({}, this.headStyle)
             }
-            // trigger dom  view update
-            this.headStyle = Object.assign({}, this.headStyle)
         })
 
 
