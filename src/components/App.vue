@@ -54,7 +54,7 @@ export default {
                 if(toTop > 55){
                     transformList.forEach((name) => {
 
-                        this.headStyle[name] = 'translateY(-55px)'
+                        this.headStyle[name] = 'translate3d(0, -55px, 0)'
                     })
                 }else{
                     transformList.forEach((name) => {
@@ -118,7 +118,8 @@ export default {
 
     border: 1px solid #eef2f8;
     background-color: #FFFFFF;
-
+    transform: translate(0, 0);
+    z-index:2;
     transition: transform .25s ease-in-out;
     @media only screen and (min-width: #{$screen-sm-min}){
         display: none;
@@ -133,6 +134,8 @@ export default {
 
 
     transform-origin: left;
+    transform: translateZ(0);
+
     transition: transform .25s ease-in-out;
 
     @media only screen and (max-width: #{$screen-sm-min}){
@@ -143,14 +146,14 @@ export default {
         float: right;
         width: calc(100% - #{$default-md-sidebar-width});
         padding-top: 30px;
-        transform : translate3d(-#{$default-md-sidebar-width}, 0, 0);
+        transform : translateZ(0 )translate(-#{$default-md-sidebar-width}, 0);
 
     }
     @media only screen and (min-width: #{$screen-md-min}){
         float: right;
         width: calc(100% - #{$default-lg-sidebar-width});
         padding-top: 30px;
-        transform : translate3d(-#{$default-lg-sidebar-width}, 0, 0);
+        transform : translateZ(0) translate(-#{$default-lg-sidebar-width}, 0);
     }
 }
 
@@ -166,7 +169,7 @@ export default {
 
     padding: 0 10px;
 
-    z-index: 9999;
+    z-index: 3;
 
 
     transform-origin: right;
@@ -179,13 +182,13 @@ export default {
 
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         left: 0;
-        transform: translateZ(0) translate3d(-#{$default-md-sidebar-width}, 0, 0);
+        transform: translateZ(0) translate(-#{$default-md-sidebar-width}, 0);
         width: $default-md-sidebar-width;
     }
 
     @media only screen and (min-width: #{$screen-md-min}){
         left: 0;
-        transform: translateZ(0) translate3d(-#{$default-lg-sidebar-width}, 0, 0);
+        transform: translateZ(0) translate(-#{$default-lg-sidebar-width}, 0);
         width: $default-lg-sidebar-width;
     }
 
@@ -207,7 +210,7 @@ export default {
     font-size: 2rem;
 
     color: #626262;
-    z-index: 9999;
+    z-index: -1;
 
     cursor: pointer;
 
@@ -216,6 +219,7 @@ export default {
 
 
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
+        z-index: 4;
         display: block;
         left: 70px;
         &.right{
@@ -224,6 +228,7 @@ export default {
     }
 
     @media only screen and (min-width: #{$screen-md-min}){
+        z-index:4;
         display: block;
         &.right{
             left: calc(100% - #{$default-lg-sidebar-width});
@@ -243,7 +248,7 @@ export default {
     #mask{
         opacity: 0.3;
         pointer-events: all;
-        z-index:1;
+        z-index:2;
     }
 
     @media only screen and (min-width: #{$screen-sm-min}){

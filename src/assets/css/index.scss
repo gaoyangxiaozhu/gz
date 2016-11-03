@@ -10,9 +10,9 @@
     top: 0;
     left:0;
 
-    transform-style: preserve-3d;
-    perspective-origin: center;
-    perspective:2000px;
+    // transform-style: preserve-3d;
+    // perspective-origin: center;
+    // perspective:2000px;
     @media only screen and (min-width: #{$screen-sm-min}){
         overflow: auto;
     }
