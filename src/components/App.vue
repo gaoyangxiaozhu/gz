@@ -80,10 +80,14 @@ export default {
                     transformList.forEach((name) => {
                         slider['style'][name] = `translate(0, ${item.offsetTop}px)`
                     })
+                    if(parseInt(document.body.clientWidth || document.documentElement.clientWidth) <  768){
+                        this.toggleSide()
+                    }
                 }
             })
+            event.preventDefault()
+            event.stopPropagation()
         })
-
 
     },
     methods: {
@@ -130,12 +134,12 @@ export default {
         float: right;
         width: calc(100% - #{$default-md-sidebar-width});
         padding-top: 30px;
-        transform : translateX(-#{$default-md-sidebar-width});
+        transform : translate3d(-#{$default-md-sidebar-width}, 0, 0);
     }
     @media only screen and (min-width: #{$screen-md-min}){
         float: right;
         width: calc(100% - #{$default-lg-sidebar-width});
-        transform : translateX(-#{$default-lg-sidebar-width});
+        transform : translate3d(-#{$default-lg-sidebar-width}, 0, 0);
         padding-top: 30px;
     }
 
@@ -162,16 +166,19 @@ export default {
     transition: transform .25s ease-in-out;
 
     //default
-    transform: translateZ(0) translateX(-#{$default-sidebar-width});
+    transform: translateZ(0);
+    left: -$default-sidebar-width;
     width: $default-sidebar-width;
 
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
-        transform: translateZ(0) translateX(-#{$default-md-sidebar-width});
+        left: 0;
+        transform: translateZ(0) translate3d(-#{$default-md-sidebar-width}, 0, 0);
         width: $default-md-sidebar-width;
     }
 
     @media only screen and (min-width: #{$screen-md-min}){
-        transform: translateZ(0) translateX(-#{$default-lg-sidebar-width});
+        left: 0;
+        transform: translateZ(0) translate3d(-#{$default-lg-sidebar-width}, 0, 0);
         width: $default-lg-sidebar-width;
     }
 
@@ -219,16 +226,16 @@ export default {
 }
 .show-side{
     #sidebar{
-        transform: translateZ(0) translateX(0px);
+        transform: translateZ(0) translate3d(#{$default-sidebar-width}, 0, 0);
     }
     #main{
-        transform: translateX(#{$default-sidebar-width});
+        transform: translateZ(0) translate3d(#{$default-sidebar-width}, 0 , 0);
     }
 
     @media only screen and (max-width: #{$screen-sm-min}){
         #mask{
             top: 0;
-            opacity: 0.6;
+            opacity: 0.3;
             pointer-events: all;
 
             z-index:2;
@@ -238,13 +245,13 @@ export default {
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         #sidebar,
         #main{
-            transform : translateZ(0) translateX(0);
+            transform : translateZ(0) translate3d(0, 0, 0);
         }
     }
     @media only screen and (min-width: #{$screen-md-min}){
         #sidebar,
         #main{
-            transform: translateZ(0) translateX(0);
+            transform: translateZ(0) translate3d(0, 0, 0);
         }
 
     }

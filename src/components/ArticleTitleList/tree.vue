@@ -105,38 +105,53 @@ $tree-bd-color: #9BB29D;
     .tree-folder{
         height: 100%;
         &.open{
-            &:before{
-                content: '';
-                display: inline-block;
-                width: 0;
-                height: calc(100% - 29px - 15px);
+            @media only screen and (min-width: #{$screen-sm-min}){
+                &:before{
+                    content: '';
+                    display: inline-block;
+                    width: 0;
+                    height: calc(100% - 29px - 15px);
 
-                position: absolute;
-                top: 29px;
-                left: 6px;
-                border: 1px solid $tree-bd-color;
+                    position: absolute;
+                    top: 29px;
+                    left: 6px;
+                    border: 1px solid $tree-bd-color;
+                }
             }
             .tree-folder--content{
 
-                left: 2rem;
-
+                left: 1rem;
+                @media only screen and (min-width: #{$screen-sm-min}){
+                    left: 2rem;
+                }
                 .tree-item{
                     position: relative;
-                    &:before{
-                        content: '';
-                        display: inline-block;
+                    @media only screen and (min-width: #{$screen-sm-min}){
+                        &:before{
+                            content: '';
+                            display: inline-block;
 
-                        position: absolute;
-                        width: 1rem;
-                        top: 13px;
-                        left: -16px;
+                            position: absolute;
+                            width: 1rem;
+                            top: 13px;
+                            left: -16px;
 
-                        border: 1px solid $tree-bd-color;
+                            border: 1px solid $tree-bd-color;
+                        }
                     }
                 }
             }
         }
-
+    }
+    .tree-loader{
+        .tree-loading{
+            display: block;
+            position:relative;
+            i{
+                position: relative;
+                margin-left: 22px;
+            }
+        }
     }
 
 

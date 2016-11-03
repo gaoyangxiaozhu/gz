@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import "../../assets/css/variable";
 
 .header{
@@ -61,6 +61,7 @@ export default {
         text-align: center;
         height: 100%;
         line-height: $default-navbar-height;
+        font-size: 1.5rem;
         padding: 0;
         width: calc(100% - 60px);
     }

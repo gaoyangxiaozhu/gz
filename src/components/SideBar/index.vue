@@ -226,14 +226,21 @@ export default {
             > a{
                 display: inline-block;
 
-                height: 40px;
-                line-height: 40px;
-                width: 40px;
+                height: 36px;
+                line-height: 36px;
+                width: 36px;
 
                 border-radius: 6px;
                 border: 1px solid $base-bd-color;
 
                 font-size: 2rem;
+
+                @media only screen and (min-width: #{$screen-sm-min}){
+                    height: 40px;
+                    line-height: 40px;
+                    width: 40px;
+
+                }
             }
         }
     }

@@ -23,7 +23,8 @@ export default {
             .then((data) => {
                 this.data = data.data
                 this.articleList = this.data.posts
-                transition.next()
+                setTimeout(() => transition.next(), 1000000)
+                // transition.next()
             })
             .catch((error) => {
                 console.log(error.message)

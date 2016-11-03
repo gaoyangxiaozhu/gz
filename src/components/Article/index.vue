@@ -59,6 +59,7 @@ export default {
 </script>
 
 <style lang="sass">
+@import "../../assets/css/variable";
 .post-main{
     .post{
         /* copy from 天壤'blog */
@@ -93,6 +94,17 @@ export default {
             }
         }
         /* copy from 天壤's blog' */
+        .post-meta{
+            &,
+            & a{
+                color: $text-muted-color;
+                font-size: 1.25rem;
+            }
+        }
+        .post-content{
+            text-align:justify;
+            text-justify:inter-ideograph;
+        }
     }
 }
 </style>

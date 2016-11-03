@@ -48,6 +48,7 @@ export default {
     > .summary-header{
         .summary-header-title{
             color: $base-title-link-color;
+            margin-bottom: 0px;
             a{
                 color: $base-title-link-color;
                 &:hover{

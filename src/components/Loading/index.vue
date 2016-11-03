@@ -22,14 +22,24 @@ export default {
 </script>
 
 <style lang="sass">
+@import "../../assets/css/variable";
 .loading{
-	width: 200px;
-	height: 200px;
+
     text-align: center;
-
     position: relative;
-    left: 40%;
 
+    font-size: 0.6rem;
+
+    width: 141px;
+    height: 141px;
+
+    margin: auto;
+    @media only screen and (min-width: #{$screen-sm-min}){
+        width: 200px;
+        height: 200px;
+
+        font-size: 1rem;
+    }
 	& span {
 		display: block;
         border-radius: 50%;
@@ -66,9 +76,10 @@ export default {
 		}
         &:last-child{
             border: none;
-            top: 44%;
-            left: 33%;
-            animation: loadingTextOpacity 1.6s linear .2s infinite;
+
+            position: relative;
+            top: 42%;
+            animation: loadingTextOpacity 1.4s linear .2s infinite;
         }
 	}
 }
