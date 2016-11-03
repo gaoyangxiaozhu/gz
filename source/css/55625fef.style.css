@@ -899,8 +899,10 @@
   top: 0;
   border: 1px solid #eef2f8;
   background-color: #FFFFFF;
-  -webkit-transform: translateZ(0) translate(0, 0);
-          transform: translateZ(0) translate(0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000;
+          perspective: 1000;
   z-index: 2;
   -webkit-transition: -webkit-transform .25s ease-in-out;
   transition: -webkit-transform .25s ease-in-out;
@@ -916,14 +918,14 @@
   width: 100%;
   -webkit-transform-origin: left;
           transform-origin: left;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
   -webkit-transition: -webkit-transform .25s ease-in-out;
   transition: -webkit-transform .25s ease-in-out;
   transition: transform .25s ease-in-out;
   transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out; }
   @media only screen and (max-width: 768px) {
     #main {
+      -webkit-transform: translateZ(0) translate(0, 0);
+              transform: translateZ(0) translate(0, 0);
       overflow-x: hidden; } }
   @media only screen and (max-width: 992px) and (min-width: 768px) {
     #main {
@@ -949,15 +951,13 @@
   font-size: 1.6rem;
   background-color: #FFFFFF;
   padding: 0 10px;
-  z-index: 3;
   -webkit-transform-origin: right;
           transform-origin: right;
   -webkit-transition: -webkit-transform .25s ease-in-out;
   transition: -webkit-transform .25s ease-in-out;
   transition: transform .25s ease-in-out;
   transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  z-index: 3;
   left: -240px;
   width: 240px; }
   @media only screen and (max-width: 992px) and (min-width: 768px) {
@@ -1004,8 +1004,8 @@
 .show-side #header,
 .show-side #sidebar,
 .show-side #main {
-  -webkit-transform: translateZ(0) translate(240px, 0);
-          transform: translateZ(0) translate(240px, 0); }
+  -webkit-transform: translate3d(240px, 0, 0);
+          transform: translate3d(240px, 0, 0); }
 
 .show-side #blog {
   overflow: hidden; }
