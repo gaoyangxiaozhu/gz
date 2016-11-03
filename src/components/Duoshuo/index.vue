@@ -19,14 +19,15 @@ export default {
         window.duoshuoQuery = {
             short_name: this.shortName
         }
-        console.log(this.shortName)
         /* eslint-disable */
         loadScript('lib/duoshuo/index.js')
         .then(()=>{
-            const url = this.url || window.location
+            let url = this.url || window.location
+            let thread = this.thread
+            console.log(url, thread)
             let container = this.$el
             let el = document.createElement('div')
-            el.setAttribute('data-thread-key', this.thread)
+            el.setAttribute('data-thread-key', thread)
             el.setAttribute('data-url', url)
             container.innerHTML = ''
             DUOSHUO.EmbedThread(el)

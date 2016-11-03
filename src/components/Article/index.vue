@@ -16,8 +16,8 @@
             <div class="post-content yue">
                 {{{ article.content }}}
             </div>
-            <div class="post-comment">
-                <duoshuo v-if="useDuoshuo" :url="article.url" :thread="thread" :short-name="duoshuo"></duoshuo>
+            <div class="post-comment" v-if="thread && duoshuo">
+                <duoshuo :url="article.url" :thread="thread" :short-name="duoshuo"></duoshuo>
             </div>
         </article>
     </div>
@@ -28,7 +28,8 @@
 import '../../lib/yue/yue.css'
 import Duoshuo from '../Duoshuo/'
 import {
-    getConfig
+    getConfig,
+    pad
 } from '../../lib/util'
 
 export default {
@@ -43,6 +44,9 @@ export default {
                 return `${this.article.path.month}月 ${this.article.path.day}, ${this.article.path.year}`
             }
             return ''
+        },
+        thread: function(){
+            return `/blog/${[this.article.path.year, this.article.path.month, this.article.path.day].map((v) => pad(v, 2)).join('/')}'/'${this.article.name}'/'`
         }
     },
     created(){
