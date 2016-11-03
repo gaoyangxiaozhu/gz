@@ -992,10 +992,8 @@
       #onside.right {
         left: calc(100% - 250px); } }
 
-.show-side #sidebar {
-  -webkit-transform: translateZ(0) translate3d(240px, 0, 0);
-          transform: translateZ(0) translate3d(240px, 0, 0); }
-
+.show-side #header,
+.show-side #sidebar,
 .show-side #main {
   -webkit-transform: translateZ(0) translate3d(240px, 0, 0);
           transform: translateZ(0) translate3d(240px, 0, 0); }
@@ -3668,6 +3666,10 @@ textarea {
   width: 100%;
   top: 0;
   left: 0; }
+
+@media only screen and (max-width: 768px) {
+  body.show-side {
+    overflow-x: hidden; } }
 
 nav {
   display: block;

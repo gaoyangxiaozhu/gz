@@ -234,8 +234,7 @@ export default {
     #sidebar,
     #main{
         transform: translateZ(0) translate3d(#{$default-sidebar-width}, 0 , 0);
-    },
-
+    }
     @media only screen and (max-width: #{$screen-sm-min}){
         #mask{
             top: 0;
