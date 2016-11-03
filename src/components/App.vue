@@ -118,7 +118,7 @@ export default {
 
     border: 1px solid #eef2f8;
     background-color: #FFFFFF;
-    transform: translate(0, 0);
+    transform: translateZ(0) translate(0, 0);
     z-index:2;
     transition: transform .25s ease-in-out;
     @media only screen and (min-width: #{$screen-sm-min}){
@@ -240,7 +240,7 @@ export default {
     #header,
     #sidebar,
     #main{
-        transform: translate3d(#{$default-sidebar-width}, 0 , 0);
+        transform: translateZ(0) translate(#{$default-sidebar-width}, 0);
     }
     #blog{
         overflow: hidden;
@@ -263,13 +263,13 @@ export default {
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         #sidebar,
         #main{
-            transform : translate3d(0, 0, 0);
+            transform : translateZ(0) translate(0, 0);
         }
     }
     @media only screen and (min-width: #{$screen-md-min}){
         #sidebar,
         #main{
-            transform: translate3d(0, 0, 0);
+            transform: translateZ(0) translated(0, 0);
         }
 
     }
