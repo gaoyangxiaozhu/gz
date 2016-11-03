@@ -31,12 +31,13 @@ function loadScript(url) {
         }
         script = document.createElement('script')
         script.async = true
-        script.src = url
         script.type = 'text/javascript'
+        script.src = url
         script.onload = loadCb
         script.onerror = errorCb
         loading[url] = script
-        document.body.appendChild(script)
+        (document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(script)
     })
 }
 function loadJSON(url) {

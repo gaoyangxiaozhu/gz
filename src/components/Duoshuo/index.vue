@@ -19,6 +19,7 @@ export default {
         window.duoshuoQuery = {
             short_name: this.shortName
         }
+        console.log(this.shortName)
         /* eslint-disable */
         loadScript('lib/duoshuo/index.js')
         .then(()=>{
