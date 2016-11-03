@@ -1,5 +1,5 @@
 <template lang="html">
-    <div :class="{'show-side': showSide }" v-cloak>
+    <div v-cloak>
         <div id="header" v-bind:style="headStyle">
             <myhead></myhead>
         </div>
@@ -93,6 +93,11 @@ export default {
     methods: {
         toggleSide(e) {
             this.showSide = !this.showSide
+            if(this.showSide){
+                document.body.classList ? document.body.classList.add('show-side') : document.body.className='show-side'
+            }else{
+                document.body.classList ? document.body.classList.remove('show-side') : document.body.className='show-side'
+            }
         },
     },
     components: { Foot, Sidebar, Myhead }
@@ -225,12 +230,11 @@ export default {
 
 }
 .show-side{
-    #sidebar{
-        transform: translateZ(0) translate3d(#{$default-sidebar-width}, 0, 0);
-    }
+    #header,
+    #sidebar,
     #main{
         transform: translateZ(0) translate3d(#{$default-sidebar-width}, 0 , 0);
-    }
+    },
 
     @media only screen and (max-width: #{$screen-sm-min}){
         #mask{
