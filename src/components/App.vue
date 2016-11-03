@@ -13,10 +13,10 @@
             </div>
         </div>
 
-        <div id="onside" @click="toggleSide" :class="{ 'right': !showSide }">
+        <div id="onside" @click.stop="toggleSide" :class="{ 'right': !showSide }">
             <i class="fa" :class="{ 'fa-desktop' : showSide, 'fa-bars' : !showSide}"></i>
         </div>
-        <div id="mask" @click="toggleSide">
+        <div id="mask" @click.stop="toggleSide">
         </div>
     </div>
 </template>
@@ -46,8 +46,7 @@ export default {
             'oTransform'
         ]
 
-        this.showSide = parseInt(pageWidth) >= 768 ? true : false
-
+        if(parseInt(pageWidth) >= 768) this.toggleSide()
 
         window.addEventListener('scroll', (event) => {
             const toTop = parseInt(document.documentElement.scrollTop || document.body.scrollTop)
