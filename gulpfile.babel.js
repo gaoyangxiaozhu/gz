@@ -3,6 +3,7 @@ import gulp from 'gulp'
 import gutil from 'gulp-util'
 import inject from 'gulp-inject'
 import WebpackDevServer from "webpack-dev-server"
+import  HtmlWebpackPlugin from 'html-webpack-plugin'
 import webpack from "webpack"
 import del from 'del'
 import env from 'gulp-env'
@@ -16,6 +17,11 @@ gulp.task('serve', cb =>{
   let myConfig = Object.create(webpackConfig)
   myConfig.entry.blog.unshift('webpack/hot/only-dev-server')
   myConfig.entry.blog.unshift('webpack-dev-server/client?http://localhost:' + DEV_PORT)
+  myConfig.plugins.push( new HtmlWebpackPlugin({
+      title: "DEV",
+      template: path.join(__dirname, 'src/index.html'),
+      inject: true
+  }))
   new WebpackDevServer(webpack(myConfig), {
       noInfo: false,
       hot: true,
