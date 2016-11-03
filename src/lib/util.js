@@ -30,14 +30,13 @@ function loadScript(url) {
             return
         }
         script = document.createElement('script')
-        script.async = true
         script.type = 'text/javascript'
+        script.async = true
         script.src = url
         script.onload = loadCb
         script.onerror = errorCb
         loading[url] = script
-        (document.getElementsByTagName('head')[0]
-		 || document.getElementsByTagName('body')[0]).appendChild(script)
+        document.body.appendChild(script)
     })
 }
 function loadJSON(url) {

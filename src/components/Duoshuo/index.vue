@@ -33,7 +33,7 @@ export default {
             container.appendChild(el)
         })
         .catch((e) => {
-            console.log(e.message)
+            console.log(e)
         })
         // require(['../../lib/duoshuo'], () => {
 
