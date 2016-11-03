@@ -28,7 +28,7 @@ export default {
     attached () {},
     methods: {
         toggle(){
-            this.$parent.showSide = !this.$parent.showSide
+            this.$parent.toggleSide()
         }
     },
     components: {}

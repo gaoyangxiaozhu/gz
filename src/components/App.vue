@@ -143,12 +143,9 @@ export default {
     @media only screen and (min-width: #{$screen-md-min}){
         float: right;
         width: calc(100% - #{$default-lg-sidebar-width});
-        transform : translate3d(-#{$default-lg-sidebar-width}, 0, 0);
         padding-top: 30px;
+        transform : translate3d(-#{$default-lg-sidebar-width}, 0, 0);
     }
-
-
-
 }
 
 #sidebar{
@@ -232,7 +229,7 @@ export default {
     #header,
     #sidebar,
     #main{
-        transform: translateZ(0) translate3d(#{$default-sidebar-width}, 0 , 0);
+        transform: translate3d(#{$default-sidebar-width}, 0 , 0);
     }
     @media only screen and (max-width: #{$screen-sm-min}){
         #mask{
@@ -247,13 +244,13 @@ export default {
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         #sidebar,
         #main{
-            transform : translateZ(0) translate3d(0, 0, 0);
+            transform : translate3d(0, 0, 0);
         }
     }
     @media only screen and (min-width: #{$screen-md-min}){
         #sidebar,
         #main{
-            transform: translateZ(0) translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
         }
 
     }
