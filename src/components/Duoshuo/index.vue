@@ -24,6 +24,9 @@ export default {
         .then(()=>{
             const url = this.url || window.location
             let container = this.$el
+            console.log(container)
+            console.log(typeof container)
+            console.log(Object.prototype.toString.call(container))
             let el = document.createElement('div')
             el.setAttribute('data-thread-key', this.thread)
             el.setAttribute('data-url', url)
