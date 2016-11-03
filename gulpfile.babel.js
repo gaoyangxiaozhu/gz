@@ -49,7 +49,7 @@ gulp.task('re', cb => {
     .pipe(gulp.dest('./source/'))
     cb()
 })
-
+/**Abandoned using http://static.duoshuo.com/embed.js**/
 gulp.task('copylib', cb => {
     gulp.src('./src/lib/duoshuo/index.js')
     .pipe(gulp.dest('./source/lib/duoshuo'))
@@ -57,7 +57,7 @@ gulp.task('copylib', cb => {
 })
 
 gulp.task('build', cb => {
-    gulpSequence('clean', 'webpack', 'copylib')(() => {
+    gulpSequence('clean', 'webpack')(() => {
         gulp.src('./src/index.pug')
         .pipe(inject(gulp.src(['./source/blog.js', './source/**/*.css'], {read: false}), {
             ignorePath: 'source',

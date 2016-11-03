@@ -26,8 +26,14 @@ import Foot from './Footer/'
 import Sidebar from './SideBar/'
 import Myhead from './Header/'
 
+const transformList = [
+    'WebkitTransform',
+    'transform',
+    'MozTransform',
+    'MsTransform',
+    'oTransform'
+]
 export default {
-    created(){},
     data () {
         return {
             showSide : false,
@@ -36,15 +42,8 @@ export default {
     },
     computed: {
     },
-    ready () {
+    created () {
         const pageWidth = document.body.clientWidth || document.documentElement.clientWidth
-        const transformList = [
-            'WebkitTransform',
-            'transform',
-            'MozTransform',
-            'MsTransform',
-            'oTransform'
-        ]
 
         if(parseInt(pageWidth) >= 768) this.toggleSide()
 
@@ -67,6 +66,9 @@ export default {
         })
 
 
+
+    },
+    ready(){
         // set slider `indicate` effect when client width > 992
         // in other words, make `Home, Categories, Tags` change effect in sidebar when client width > 992
         const selfPageBtn = document.querySelector('.sidebar-buttons.self-page')
