@@ -116,8 +116,6 @@ export default {
     position: fixed;
     top: 0;
 
-    z-index: 1;
-
     border: 1px solid #eef2f8;
     background-color: #FFFFFF;
 
@@ -239,13 +237,21 @@ export default {
     #main{
         transform: translate3d(#{$default-sidebar-width}, 0 , 0);
     }
-    @media only screen and (max-width: #{$screen-sm-min}){
-        #mask{
-            top: 0;
-            opacity: 0.3;
-            pointer-events: all;
+    #blog{
+        overflow: hidden;
+    }
+    #mask{
+        opacity: 0.3;
+        pointer-events: all;
+        z-index:1;
+    }
 
-            z-index:2;
+    @media only screen and (min-width: #{$screen-sm-min}){
+        #blog{
+            overflow: auto;
+        }
+        #mask{
+            display: none;
         }
     }
 
@@ -275,13 +281,17 @@ export default {
 }
 #mask{
     position: fixed;
+    top: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
     background-color: #000;
     opacity: 0;
 
 
     pointer-events: none;
+
+    @media only screen and (min-width: #{screen-sm-min}){
+        display: none;
+    }
 }
 </style>
