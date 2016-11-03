@@ -34,8 +34,6 @@ export default {
             loadJSON(dataURL)
             .then((data) => {
                 this.article = data.data
-                console.log(this.article)
-                console.log('data..')
                 transition.next()
             })
             .catch((error) => {

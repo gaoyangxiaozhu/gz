@@ -21,7 +21,7 @@ export default {
         require(['../../lib/duoshuo'], () => {
             const url = this.url || window.location
             const container = this.$el
-            const el = document.createElement('div')
+            let el = document.createElement('div')
             el.setAttribute('data-thread-key', this.thread)
             el.setAttribute('data-url', url)
             container.innerHTML = ''
