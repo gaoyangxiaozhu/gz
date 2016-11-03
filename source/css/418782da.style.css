@@ -918,6 +918,9 @@
   transition: -webkit-transform .25s ease-in-out;
   transition: transform .25s ease-in-out;
   transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out; }
+  @media only screen and (max-width: 768px) {
+    #main {
+      overflow-x: hidden; } }
   @media only screen and (max-width: 992px) and (min-width: 768px) {
     #main {
       float: right;
@@ -3662,10 +3665,14 @@ textarea {
 
 #blog {
   position: absolute;
+  overflow-x: hidden;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0; }
+  @media only screen and (min-width: 768px) {
+    #blog {
+      overflow: auto; } }
 
 @media only screen and (max-width: 768px) {
   body.show-side {

@@ -132,15 +132,21 @@ export default {
     display: block;
     width: 100%;
 
+
+
     transform-origin: left;
     transition: transform .25s ease-in-out;
 
-
+    @media only screen and (max-width: #{$screen-sm-min}){
+        overflow-x: hidden;
+    }
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
+
         float: right;
         width: calc(100% - #{$default-md-sidebar-width});
         padding-top: 30px;
         transform : translate3d(-#{$default-md-sidebar-width}, 0, 0);
+
     }
     @media only screen and (min-width: #{$screen-md-min}){
         float: right;
