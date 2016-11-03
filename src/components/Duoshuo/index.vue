@@ -6,7 +6,9 @@
 
 <script>
 
-
+import {
+	loadScript
+} from '../../lib/util'
 export default {
     props:[ 'shortName', 'url', 'thread'],
     data () {
@@ -18,17 +20,23 @@ export default {
             short_name: this.shortName
         }
         /* eslint-disable */
-        require(['../../lib/duoshuo'], () => {
+        loadScript('lib/duoshuo/index.js')
+        .then(()=>{
             const url = this.url || window.location
-            const container = this.$el
+            let container = this.$el
             let el = document.createElement('div')
             el.setAttribute('data-thread-key', this.thread)
             el.setAttribute('data-url', url)
             container.innerHTML = ''
             container.appendChild(el)
-
             DUOSHUO.EmbedThread(el)
         })
+        .catch((e) => {
+            console.log(e.message)
+        })
+        // require(['../../lib/duoshuo'], () => {
+
+        // })
         /* eslint-enable */
     },
     attached () {},

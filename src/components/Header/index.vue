@@ -5,7 +5,7 @@
                 <i class="fa fa-bars" @click="toggle"></i>
             </span>
             <h1 class="header-title">
-                {{ title }}
+                <a v-link="{ name: 'home' }">{{ title }}</a>
             </h1>
         </header>
     </div>
@@ -52,6 +52,7 @@ export default {
         line-height: $default-navbar-height;
         font-size: 2rem;
 
+        color: #7A7E83;
         cursor: pointer;
         float: left;
 
@@ -64,6 +65,12 @@ export default {
         font-size: 1.5rem;
         padding: 0;
         width: calc(100% - 60px);
+        a{
+            color: #7A7E83;
+            &:hover{
+                color: darken(#7A7E83, 10%);
+            }
+        }
     }
 
 

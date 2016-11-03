@@ -293,6 +293,12 @@
   .post-main .post .post-meta a {
     color: #9eabb3;
     font-size: 1.25rem; }
+  @media only screen and (min-width: 768px) {
+    .post-main .post .post-title {
+      font-size: 3.3rem; } }
+  @media only screen and (min-width: 992px) {
+    .post-main .post .post-title {
+      font-size: 3.7rem; } }
   .post-main .post .post-content {
     text-align: justify;
     text-justify: inter-ideograph; }
@@ -607,6 +613,14 @@
     margin-top: 0;
   }
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -1179,7 +1193,7 @@
 .header {
   position: relative;
   padding: 0 20px;
-  color: #656D78;
+  color: #4a4a4a;
   height: 55px;
   overflow: hidden; }
   .header--btn {
@@ -1187,6 +1201,7 @@
     height: 55px;
     line-height: 55px;
     font-size: 2rem;
+    color: #7A7E83;
     cursor: pointer;
     float: left; }
   .header h1 {
@@ -1197,6 +1212,10 @@
     font-size: 1.5rem;
     padding: 0;
     width: calc(100% - 60px); }
+    .header h1 a {
+      color: #7A7E83; }
+      .header h1 a:hover {
+        color: #616569; }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3573,7 +3592,7 @@ h4 {
   letter-spacing: -.04em;
   font-family: 'Open Sans',sans-serif;
   line-height: 1.45em;
-  color: #656D78; }
+  color: #4a4a4a; }
   h1 a,
   h2 a,
   h3 a,
@@ -3588,7 +3607,7 @@ h4 {
 h1,
 h2 {
   font-size: 2.8rem;
-  font-weight: 500; }
+  font-weight: 700; }
   @media only screen and (max-width: 768px) {
     h1,
     h2 {

@@ -101,6 +101,14 @@ export default {
                 font-size: 1.25rem;
             }
         }
+        .post-title{
+            @media only screen and(min-width: #{$screen-sm-min}){
+                font-size: 3.3rem;
+            }
+            @media only screen and(min-width: #{$screen-md-min}){
+                font-size: 3.7rem;
+            }
+        }
         .post-content{
             text-align:justify;
             text-justify:inter-ideograph;

@@ -50,8 +50,14 @@ gulp.task('re', cb => {
     cb()
 })
 
+gulp.task('copylib', cb => {
+    gulp.src('./src/lib/duoshuo/index.js')
+    .pipe(gulp.dest('./source/lib/duoshuo'))
+    cb()
+})
+
 gulp.task('build', cb => {
-    gulpSequence('clean', 'webpack', 're')(() => {
+    gulpSequence('clean', 'webpack', 'copylib')(() => {
         gulp.src('./src/index.pug')
         .pipe(inject(gulp.src(['./source/blog.js', './source/**/*.css'], {read: false}), {
             ignorePath: 'source',
