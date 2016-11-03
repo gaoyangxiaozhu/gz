@@ -17,7 +17,7 @@
                 {{{ article.content }}}
             </div>
             <div class="post-comment" v-if="thread && duoshuo">
-                <duoshuo :url="article.url" :thread="thread" :short-name="duoshuo"></duoshuo>
+                <duoshuo :url="article.permalink" :thread="thread" :short-name="duoshuo"></duoshuo>
             </div>
         </article>
     </div>
@@ -46,7 +46,7 @@ export default {
             return ''
         },
         thread: function(){
-            return `/blog/${[this.article.path.year, this.article.path.month, this.article.path.day].map((v) => pad(v, 2)).join('/')}'/'${this.article.name}'/'`
+            return `/blog/${[this.article.path.year, this.article.path.month, this.article.path.day].map((v) => pad(v, 2)).join('/')}/${this.article.title}/`
         }
     },
     created(){
