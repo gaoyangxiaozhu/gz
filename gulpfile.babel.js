@@ -1,5 +1,7 @@
 import path from 'path'
 import gulp from 'gulp'
+import gulpSequence from 'gulp-sequence'
+import gulpReplace from 'gulp-replace'
 import gutil from 'gulp-util'
 import inject from 'gulp-inject'
 import WebpackDevServer from "webpack-dev-server"
@@ -39,15 +41,28 @@ gulp.task('serve', cb =>{
   })
 })
 gulp.task('clean', cb => del([path.join(__dirname, 'source'), path.join(__dirname, 'layout')], cb))
-gulp.task('build', ['clean', 'webpack'], () =>{
-    gulp.src('./src/index.pug')
-    .pipe(inject(gulp.src(['./source/blog.js', './source/**/*.css'], {read: false}), {
-        ignorePath: 'source',
-        addRootSlash: false
-    }))
-    .pipe(gulp.dest('layout/'))
+
+// replace 'use strict' to '' for 1.blog.js
+gulp.task('re', cb => {
+    gulp.src('./source/1.blog.js')
+    .pipe(gulpReplace(/\\"use\s+strict\\";\\n\\n/ig,''))
+    .pipe(gulp.dest('./source/'))
+    cb()
+})
+
+gulp.task('build', cb => {
+    gulpSequence('clean', 'webpack', 're')(() => {
+        gulp.src('./src/index.pug')
+        .pipe(inject(gulp.src(['./source/blog.js', './source/**/*.css'], {read: false}), {
+            ignorePath: 'source',
+            addRootSlash: false
+        }))
+        .pipe(gulp.dest('layout/'))
+        cb()
+    })
 })
 gulp.task('default', ['build'])
+
 gulp.task('webpack', cb => {
   let webpackConfig = require('./webpack.config.js')
   let myConfig = Object.create(webpackConfig)

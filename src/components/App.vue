@@ -119,9 +119,6 @@ export default {
     border: 1px solid #eef2f8;
     background-color: #FFFFFF;
 
-    backface-visibility: hidden;
-    perspective: 1000;
-
     z-index:2;
     transition: transform .25s ease-in-out;
     @media only screen and (min-width: #{$screen-sm-min}){

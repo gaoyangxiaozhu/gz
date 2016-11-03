@@ -899,10 +899,6 @@
   top: 0;
   border: 1px solid #eef2f8;
   background-color: #FFFFFF;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-perspective: 1000;
-          perspective: 1000;
   z-index: 2;
   -webkit-transition: -webkit-transform .25s ease-in-out;
   transition: -webkit-transform .25s ease-in-out;
