@@ -64,9 +64,6 @@ export default {
                 this.headStyle = Object.assign({}, this.headStyle)
             }
         })
-
-
-
     },
     ready(){
         // set slider `indicate` effect when client width > 992
