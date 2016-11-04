@@ -25,7 +25,7 @@ export default {
             let url = this.url || window.location
             let thread = this.thread
             let container = this.$el
-            
+
             setTimeout(()=>{
                 let el = document.createElement('div')
                 el.setAttribute('data-thread-key', thread)
@@ -33,7 +33,7 @@ export default {
                 container.innerHTML = ''
                 DUOSHUO.EmbedThread(el)
                 container.appendChild(el)
-            }, 1000)
+            }, 100)
         })
         .catch((e) => {
             console.log(e)

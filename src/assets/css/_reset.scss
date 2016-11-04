@@ -79,6 +79,7 @@ a,
 a:focus,
 a:active,
 a:hover{
+    appearance: none;
     text-decoration: none;
     cursor: pointer;
 }
@@ -90,7 +91,9 @@ a{
         color: $base-link-hover-color;
     }
 }
-
+a,
+a:hover,
+a:active,
 button,
 button:hover,
 button:active,
@@ -101,4 +104,5 @@ input:active,
 input:focus
 textarea{
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
