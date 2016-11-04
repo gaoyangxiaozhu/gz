@@ -18,7 +18,7 @@
             </div>
             <ul class="sidebar-buttons self-page">
                 <li class="slider"></li>
-                <li v-for="button in buttonsmap">
+                <li :class="{ 'active': $route.name == button.routename }" v-for="button in buttonsmap">
                     <a v-link="{ name: button.routename }">
                         <i class="fa {{ button.iconclass }} sidebar-buttons--icon"></i>
                         <span class="sidebar-buttons--desc">{{ button.name }}</span>
@@ -144,6 +144,7 @@ export default {
         }
     }
     .sidebar-buttons{
+        position: relative;
         padding: 0 20px;
         a{
             color: #626262;
@@ -152,23 +153,44 @@ export default {
                 color: darken(#626262, 10%);
             }
         }
-        &.self-page .slider{
-            display: none;
+        &.self-page {
+            padding: 0;
+            .slider{
+                display: block;
+
+                position: absolute;
+                top: 0px;
+                left: 0px;
+
+                height: 27px;
+                width: 100%;
+
+                background-color: rgba(176, 176, 176, 0.72);
+                z-index: -1;
+
+                transition: transform .15s ease-in-out .1s;
+                &:before{
+                    content: '';
+                    display: inline-block;
+                }
+                @media only screen and (min-width: #{$screen-sm-min}){
+                    transition: transform .15s ease-in-out;
+                }
+            }
         }
+
         @media only screen and (min-width: #{$screen-md-min}){
             &.self-page{
-                position: relative;
+                padding: 0 20px;
+
                 .slider{
-                    display: block;
-
-                    position: absolute;
-                    top: 0px;
                     left: 60px;
-
                     height: 6px;
                     width: 6px;
 
-                    transition: transform .15s ease-in-out;
+                    background-color: transparent;
+
+                    z-index: 0;
                     &:before{
                         content: '';
                         display: inline-block;
@@ -179,6 +201,7 @@ export default {
                         border-right: 5px solid transparent;
                     }
                 }
+
             }
         }
         @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
@@ -220,7 +243,10 @@ export default {
             margin-left: 0.5rem;
             margin-bottom: 1rem;
             &:first-child{
-                margin-left: 0;
+                margin-left: 1rem;
+                @media only screen and (min-width: #{$screen-sm-min}){
+                    margin-left: 0;
+                }
             };
 
             > a{

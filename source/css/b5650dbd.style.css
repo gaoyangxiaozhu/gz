@@ -962,7 +962,7 @@
   text-align: center;
   font-size: 1.6rem;
   background-color: #FFFFFF;
-  padding: 0 10px;
+  padding: 0 0px;
   -webkit-transform-origin: right;
           transform-origin: right;
   -webkit-transition: -webkit-transform .25s ease-in-out;
@@ -975,12 +975,14 @@
   @media only screen and (max-width: 992px) and (min-width: 768px) {
     #sidebar {
       left: 0;
+      padding: 0 10px;
       -webkit-transform: translateZ(0) translate(-100px, 0);
               transform: translateZ(0) translate(-100px, 0);
       width: 100px; } }
   @media only screen and (min-width: 992px) {
     #sidebar {
       left: 0;
+      padding: 0 10px;
       -webkit-transform: translateZ(0) translate(-250px, 0);
               transform: translateZ(0) translate(-250px, 0);
       width: 250px; } }
@@ -1122,6 +1124,7 @@
     margin: auto; }
 
 .sidebar .sidebar-buttons {
+  position: relative;
   padding: 0 20px; }
   .sidebar .sidebar-buttons a {
     color: #626262;
@@ -1129,22 +1132,39 @@
     transition: all .2s ease-in-out; }
     .sidebar .sidebar-buttons a:hover {
       color: #494949; }
-  .sidebar .sidebar-buttons.self-page .slider {
-    display: none; }
+  .sidebar .sidebar-buttons.self-page {
+    padding: 0; }
+    .sidebar .sidebar-buttons.self-page .slider {
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 27px;
+      width: 100%;
+      background-color: rgba(176, 176, 176, 0.72);
+      z-index: -1;
+      -webkit-transition: -webkit-transform .15s ease-in-out .1s;
+      transition: -webkit-transform .15s ease-in-out .1s;
+      transition: transform .15s ease-in-out .1s;
+      transition: transform .15s ease-in-out .1s, -webkit-transform .15s ease-in-out .1s; }
+      .sidebar .sidebar-buttons.self-page .slider:before {
+        content: '';
+        display: inline-block; }
+      @media only screen and (min-width: 768px) {
+        .sidebar .sidebar-buttons.self-page .slider {
+          -webkit-transition: -webkit-transform .15s ease-in-out;
+          transition: -webkit-transform .15s ease-in-out;
+          transition: transform .15s ease-in-out;
+          transition: transform .15s ease-in-out, -webkit-transform .15s ease-in-out; } }
   @media only screen and (min-width: 992px) {
     .sidebar .sidebar-buttons.self-page {
-      position: relative; }
+      padding: 0 20px; }
       .sidebar .sidebar-buttons.self-page .slider {
-        display: block;
-        position: absolute;
-        top: 0px;
         left: 60px;
         height: 6px;
         width: 6px;
-        -webkit-transition: -webkit-transform .15s ease-in-out;
-        transition: -webkit-transform .15s ease-in-out;
-        transition: transform .15s ease-in-out;
-        transition: transform .15s ease-in-out, -webkit-transform .15s ease-in-out; }
+        background-color: transparent;
+        z-index: 0; }
         .sidebar .sidebar-buttons.self-page .slider:before {
           content: '';
           display: inline-block;
@@ -1179,7 +1199,10 @@
     margin-left: 0.5rem;
     margin-bottom: 1rem; }
     .sidebar .social .social-item:first-child {
-      margin-left: 0; }
+      margin-left: 1rem; }
+      @media only screen and (min-width: 768px) {
+        .sidebar .social .social-item:first-child {
+          margin-left: 0; } }
     .sidebar .social .social-item > a {
       display: inline-block;
       height: 36px;

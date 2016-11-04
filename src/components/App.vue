@@ -164,7 +164,7 @@ export default {
     font-size: 1.6rem;
     background-color: #FFFFFF; //#B6B6B6
 
-    padding: 0 10px;
+    padding: 0 0px;
 
     transform-origin: right;
     transition: transform .25s ease-in-out;
@@ -177,12 +177,14 @@ export default {
 
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         left: 0;
+        padding: 0 10px;
         transform: translateZ(0) translate(-#{$default-md-sidebar-width}, 0);
         width: $default-md-sidebar-width;
     }
 
     @media only screen and (min-width: #{$screen-md-min}){
         left: 0;
+        padding: 0 10px;
         transform: translateZ(0) translate(-#{$default-lg-sidebar-width}, 0);
         width: $default-lg-sidebar-width;
     }
