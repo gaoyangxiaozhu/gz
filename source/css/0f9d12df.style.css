@@ -3657,6 +3657,9 @@ a,
 a:focus,
 a:active,
 a:hover {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   text-decoration: none;
   cursor: pointer; }
 
@@ -3665,6 +3668,9 @@ a {
   a:focus, a:active, a:hover {
     color: #6A1A8B; }
 
+a,
+a:hover,
+a:active,
 button,
 button:hover,
 button:active,
@@ -3674,7 +3680,8 @@ input:hover,
 input:active,
 input:focus
 textarea {
-  outline: none; }
+  outline: none;
+  -webkit-tap-highlight-color: transparent; }
 
 @font-face {
   font-family: 'open_sans';
