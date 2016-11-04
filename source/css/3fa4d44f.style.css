@@ -1231,6 +1231,8 @@
     color: #7A7E83;
     cursor: pointer;
     float: left; }
+    .header--btn:hover, .header--btn:active {
+      color: #7A7E83; }
   .header h1 {
     float: right;
     text-align: center;

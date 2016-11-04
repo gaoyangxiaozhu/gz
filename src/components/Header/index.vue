@@ -1,9 +1,9 @@
 <template lang="html">
     <div class="header">
         <header>
-            <span class="header--btn">
+            <a class="header--btn">
                 <i class="fa fa-bars" @click="toggle"></i>
-            </span>
+            </a>
             <h1 class="header-title">
                 <a v-link="{ name: 'home' }">{{ title }}</a>
             </h1>
@@ -53,6 +53,10 @@ export default {
         font-size: 2rem;
 
         color: #7A7E83;
+        &:hover,
+        &:active{
+            color: #7A7E83;
+        }
         cursor: pointer;
         float: left;
 
