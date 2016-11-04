@@ -1,13 +1,13 @@
 <template lang="html">
     <div class="header">
-        <header>
-            <a class="header--btn">
-                <i class="fa fa-bars" @click="toggle"></i>
-            </a>
-            <h1 class="header-title">
-                <a v-link="{ name: 'home' }">{{ title }}</a>
-            </h1>
-        </header>
+
+        <a class="header--btn">
+            <i class="fa fa-bars" @click="toggle"></i>
+        </a>
+        <h1 class="header-title">
+            <a v-link="{ name: 'home' }">{{ title }}</a>
+        </h1>
+
     </div>
 </template>
 
@@ -45,9 +45,8 @@ export default {
     height: $default-navbar-height;
 
     overflow: hidden;
-
     &--btn{
-        display: inline-block;
+        position: absolute;
         height: $default-navbar-height;
         line-height: $default-navbar-height;
         font-size: 2rem;
@@ -58,17 +57,13 @@ export default {
             color: #7A7E83;
         }
         cursor: pointer;
-        float: left;
-
     }
     h1{
-        float: right;
         text-align: center;
-        height: 100%;
+        height: $default-navbar-height;
         line-height: $default-navbar-height;
         font-size: 1.5rem;
         padding: 0;
-        width: calc(100% - 60px);
         a{
             color: #7A7E83;
             &:hover{
