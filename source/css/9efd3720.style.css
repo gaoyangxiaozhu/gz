@@ -68,7 +68,14 @@
     .summary > .summary-meta time:hover,
     .summary > .summary-meta span:hover,
     .summary > .summary-meta a:hover {
-      color: #3d3d3d; }
+      color: #3d3d3d;
+      text-decoration: underline; }
+
+.summary > .summary-exceprt {
+  margin-top: 15px; }
+
+.summary > .summary-read-more a:hover {
+  text-decoration: underline; }
 /************navbar*************/
 .loading {
   text-align: center;
@@ -310,10 +317,10 @@
  * Copyright (c) 2013 - 2014 by Hsiaoming Yang.
  */
 
-.yue {
+/*.yue {
   font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
   color: #444443;
-}
+}*/
 
 .windows .yue {
   font-size: 16px;
@@ -328,7 +335,7 @@
   background-color: rgba(0,0,0,0.2);
 }
 
-.yue h1,
+/*.yue h1,
 .yue h2,
 .yue h3,
 .yue h4,
@@ -336,7 +343,7 @@
 .yue h6 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
   color: #222223;
-}
+}*/
 
 .yue h1 {
   font-size: 1.8em;
@@ -390,13 +397,13 @@
 .yue strong,
 .yue b {
   font-weight: 700;
-  color: #222223;
+  color: #4B4B53;
 }
 
 .yue em,
 .yue i {
   font-style: italic;
-  color: #222223;
+  color: #4B4B53;
 }
 
 .yue img {
@@ -1005,7 +1012,8 @@
     #onside {
       z-index: 4;
       display: block;
-      left: 70px; }
+      left: 40px;
+      top: 15px; }
       #onside.right {
         left: calc(100% - 100px + 30px); } }
   @media only screen and (min-width: 992px) {
@@ -3601,10 +3609,10 @@ body,
 * {
   box-sizing: border-box; }
 
+ul,
+li,
 p {
-  font-size: 16px;
-  color: #5d686f;
-  margin-bottom: 1.6rem; }
+  color: #5d686f; }
 
 hr {
   border-color: #FFFFFF; }
@@ -3612,7 +3620,8 @@ hr {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   margin-bottom: 5px;
   margin-top: 0px;
   letter-spacing: -.04em;
@@ -3622,12 +3631,14 @@ h4 {
   h1 a,
   h2 a,
   h3 a,
-  h4 a {
+  h4 a,
+  h5 a {
     color: #4a4a4a; }
     h1 a:hover,
     h2 a:hover,
     h3 a:hover,
-    h4 a:hover {
+    h4 a:hover,
+    h5 a:hover {
       color: black; }
 
 h1,
@@ -3681,6 +3692,9 @@ input:focus
 textarea {
   outline: none;
   -webkit-tap-highlight-color: transparent; }
+
+dl, ol, p, ul {
+  margin: 0 0 1.75rem; }
 
 @font-face {
   font-family: 'open_sans';

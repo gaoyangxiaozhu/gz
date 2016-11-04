@@ -218,7 +218,8 @@ export default {
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         z-index: 4;
         display: block;
-        left: 70px;
+        left: 40px;
+        top: 15px;
         &.right{
             left: calc(100% - #{$default-md-sidebar-width} + 30px);
         }

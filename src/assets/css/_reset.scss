@@ -25,12 +25,10 @@ body,
 *{
     box-sizing: border-box;
 }
+ul,
+li,
 p{
-    font-size: 16px;
     color: $base-font-color;
-
-    margin-bottom: 1.6rem;
-
 }
 hr{
     border-color: #FFFFFF;
@@ -38,7 +36,8 @@ hr{
 h1,
 h2,
 h3,
-h4{
+h4,
+h5{
     margin-bottom: 5px;
     margin-top: 0px;
     letter-spacing: -.04em;
@@ -105,4 +104,8 @@ input:focus
 textarea{
     outline: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+dl, ol, p, ul{
+    margin: 0 0 1.75rem;
 }

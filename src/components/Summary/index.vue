@@ -17,7 +17,7 @@
             {{{ article.content }}}
         </div>
         <div class="summary-read-more">
-            <a v-link="{ name: 'post', params: article.path }">read more</a>
+            <a v-link="{ name: 'post', params: article.path }">Continue reading</a>
         </div>
     </div>
 </template>
@@ -53,6 +53,7 @@ export default {
                 color: $base-title-link-color;
                 &:hover{
                     color: darken($base-title-link-color, 10%);
+
                 }
             }
         }
@@ -66,8 +67,17 @@ export default {
              color: $text-muted-color;
              &:hover{
                  color: darken($base-title-link-color, 5%);
+                 text-decoration: underline;
              }
          }
+    }
+    > .summary-exceprt{
+        margin-top: 15px;
+    }
+    > .summary-read-more{
+        a:hover{
+            text-decoration: underline;
+        }
     }
 
 }
