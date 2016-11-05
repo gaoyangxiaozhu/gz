@@ -3,9 +3,9 @@
         <div class="tree-folder" :class="{ 'open' : open }">
             <div class="tree-folder--header">
                 <div class="tree-folder--name" >
-                    <h4>
-                        <i class="fa" :class="{ 'fa-plus': !open, 'fa-minus': open}" @click="toggle"></i>
-                        <a v-link="{ name: base, params: {name: data.name } }">{{ data.name}}({{ data.count }})</a>
+                    <h4 @click="toggle">
+                        <i class="fa" :class="{ 'fa-plus': !open, 'fa-minus': open}" ></i>
+                        <a>{{ data.name}}({{ data.count }})</a>
                     </h4>
 
                 </div>
@@ -134,7 +134,7 @@ $tree-bd-color: #9BB29D;
                             position: absolute;
                             width: 1rem;
                             top: 13px;
-                            left: -16px;
+                            left: calc(-2rem + 6px);
 
                             border: 1px solid $tree-bd-color;
                         }

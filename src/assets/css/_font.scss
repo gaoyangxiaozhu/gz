@@ -67,3 +67,11 @@
     font-weight: 700;
     font-style: italic;
 }
+@font-face {
+    font-family: 'gooddog';
+    src: url('../fonts/gooddog-webfont.woff2') format('woff2'),
+         url('../fonts/gooddog-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

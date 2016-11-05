@@ -39,10 +39,13 @@ export default {
 @import "../../assets/css/variable";
 
 .header{
-    position: relative;
     padding: 0 20px;
-    color: $base-title-color;
+    width: 100%;
     height: $default-navbar-height;
+
+    color: $base-title-color;
+
+    transform: translate(0, 0);
 
     overflow: hidden;
     &--btn{

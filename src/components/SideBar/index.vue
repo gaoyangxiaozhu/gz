@@ -105,13 +105,16 @@ export default {
 .sidebar{
     .sidebar-nav{
         &--profile{
+            .subtitle{
+                font-family: 'gooddog';
+            },
+
             .author{
                 font-size: 1.9rem;
                 font-weight: 400px;
             }
             .title{
                 font-size: 1.4rem;
-
                 margin-bottom: 4px;
             }
             .subtitle{
@@ -154,6 +157,7 @@ export default {
             }
         }
         &.self-page {
+            margin-top: 2rem;
             padding: 0;
             .slider{
                 display: block;
@@ -165,16 +169,16 @@ export default {
                 height: 27px;
                 width: 100%;
 
-                background-color: rgba(176, 176, 176, 0.72);
+                // background-color: rgba(176, 176, 176, 0.72);
+                background-color: transparent;
                 z-index: -1;
-
-                transition: transform .15s ease-in-out .1s;
                 &:before{
                     content: '';
                     display: inline-block;
                 }
                 @media only screen and (min-width: #{$screen-sm-min}){
                     transition: transform .15s ease-in-out;
+                    background-color: rgba(176, 176, 176, 0.72);
                 }
             }
         }

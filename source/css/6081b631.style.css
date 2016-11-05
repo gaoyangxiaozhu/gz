@@ -764,7 +764,7 @@
             position: absolute;
             width: 1rem;
             top: 13px;
-            left: -16px;
+            left: calc(-2rem + 6px);
             border: 1px solid #9BB29D; } }
   .tree .tree-loader .tree-loading[_v-2eb0bb12] {
     display: block;
@@ -918,6 +918,7 @@
   display: block;
   height: 55px;
   width: 100%;
+  overflow: hidden;
   position: fixed;
   top: 0;
   border: 1px solid #eef2f8;
@@ -1101,6 +1102,10 @@
 
 
 /************navbar*************/
+.sidebar .sidebar-nav--profile .subtitle {
+  font-family: 'gooddog'; }
+
+.sidebar .sidebar-nav--profile,
 .sidebar .sidebar-nav--profile .author {
   font-size: 1.9rem;
   font-weight: 400px; }
@@ -1141,6 +1146,7 @@
     .sidebar .sidebar-buttons a:hover {
       color: #494949; }
   .sidebar .sidebar-buttons.self-page {
+    margin-top: 2rem;
     padding: 0; }
     .sidebar .sidebar-buttons.self-page .slider {
       display: block;
@@ -1149,12 +1155,8 @@
       left: 0px;
       height: 27px;
       width: 100%;
-      background-color: rgba(176, 176, 176, 0.72);
-      z-index: -1;
-      -webkit-transition: -webkit-transform .15s ease-in-out .1s;
-      transition: -webkit-transform .15s ease-in-out .1s;
-      transition: transform .15s ease-in-out .1s;
-      transition: transform .15s ease-in-out .1s, -webkit-transform .15s ease-in-out .1s; }
+      background-color: transparent;
+      z-index: -1; }
       .sidebar .sidebar-buttons.self-page .slider:before {
         content: '';
         display: inline-block; }
@@ -1163,7 +1165,8 @@
           -webkit-transition: -webkit-transform .15s ease-in-out;
           transition: -webkit-transform .15s ease-in-out;
           transition: transform .15s ease-in-out;
-          transition: transform .15s ease-in-out, -webkit-transform .15s ease-in-out; } }
+          transition: transform .15s ease-in-out, -webkit-transform .15s ease-in-out;
+          background-color: rgba(176, 176, 176, 0.72); } }
   @media only screen and (min-width: 992px) {
     .sidebar .sidebar-buttons.self-page {
       padding: 0 20px; }
@@ -1226,10 +1229,12 @@
           width: 40px; } }
 /************navbar*************/
 .header {
-  position: relative;
   padding: 0 20px;
-  color: #4a4a4a;
+  width: 100%;
   height: 55px;
+  color: #4a4a4a;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
   overflow: hidden; }
   .header--btn {
     position: absolute;
@@ -3743,6 +3748,12 @@ dl, ol, p, ul {
   src: url(/fonts/371715f0.opensans-bolditalic-webfont.woff2) format("woff2"), url(/fonts/eb4706fe.opensans-bolditalic-webfont.woff) format("woff");
   font-weight: 700;
   font-style: italic; }
+
+@font-face {
+  font-family: 'gooddog';
+  src: url(/fonts/46f015ad.gooddog-webfont.woff2) format("woff2"), url(/fonts/b82514b8.gooddog-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
 
 #blog {
   position: absolute;

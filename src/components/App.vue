@@ -111,6 +111,7 @@ export default {
     display: block;
     height: 55px;
     width: 100%;
+    overflow: hidden;
 
     position: fixed;
     top: 0;
