@@ -176,6 +176,7 @@ export default {
     left: -$default-sidebar-width;
     width: $default-sidebar-width;
 
+
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         left: 0;
         padding: 0 10px;
@@ -186,6 +187,9 @@ export default {
     @media only screen and (min-width: #{$screen-md-min}){
         left: 0;
         padding: 0 10px;
+
+        border-right: 1px solid $base-bd-color;
+
         transform: translateZ(0) translate(-#{$default-lg-sidebar-width}, 0);
         width: $default-lg-sidebar-width;
     }

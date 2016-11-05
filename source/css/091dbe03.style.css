@@ -991,6 +991,7 @@
     #sidebar {
       left: 0;
       padding: 0 10px;
+      border-right: 1px solid #d9d9d9;
       -webkit-transform: translateZ(0) translate(-250px, 0);
               transform: translateZ(0) translate(-250px, 0);
       width: 250px; } }
