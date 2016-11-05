@@ -44,6 +44,7 @@ h5{
     font-family: 'Open Sans',sans-serif;
     line-height: 1.45em;
     color: $base-title-color;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     a{
         color: $base-title-link-color;

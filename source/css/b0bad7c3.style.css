@@ -3635,7 +3635,8 @@ h5 {
   letter-spacing: -.04em;
   font-family: 'Open Sans',sans-serif;
   line-height: 1.45em;
-  color: #4a4a4a; }
+  color: #4a4a4a;
+  -webkit-tap-highlight-color: transparent; }
   h1 a,
   h2 a,
   h3 a,
