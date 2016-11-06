@@ -79,7 +79,7 @@ export default {
 
             position: relative;
             top: 42%;
-            animation: loadingTextOpacity 1.4s linear .2s infinite;
+            animation: loadingTextOpacity 1.4s linear 0 infinite;
         }
 	}
 }
