@@ -1,5 +1,4 @@
 <template lang="html">
-    {{ width }}
     <div v-cloak>
         <div id="header" v-bind:style="headStyle">
             <myhead></myhead>
@@ -8,11 +7,10 @@
             <sidebar></sidebar>
         </div>
         <div id="main">
-            <div class="">
-                {{ width }}
-            </div>
             <router-view></router-view>
             <div id="footer" class="main-content-wrap">
+                {{ width }}
+                {{ hwidth }}
                 <foot></foot>
             </div>
         </div>
@@ -42,6 +40,7 @@ export default {
         return {
             showSide : false,
             width: 0,
+            hwidth: 0,
             headStyle: {}
         }
     },
@@ -110,6 +109,7 @@ export default {
 
             }
             this.width = document.body.clientWidth || document.documentElement.width
+            this.hwidth =  document.documentElement.width || document.body.clientWidth 
         },
     },
     components: { Foot, Sidebar, Myhead }
