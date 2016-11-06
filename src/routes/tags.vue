@@ -1,9 +1,7 @@
 <template lang="html">
-    <div>
-        <div class="main-content-wrap">
-            <article-title-list base="tag" :data="tags" v-if="!$loadingRouteData"></article-title-list>
-            <loading v-if="$loadingRouteData"></loading>
-        </div>
+    <div class="main-content-wrap">
+        <article-title-list base="tag" :data="tags" v-if="!$loadingRouteData"></article-title-list>
+        <loading v-if="$loadingRouteData"></loading>
     </div>
 </template>
 

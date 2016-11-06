@@ -1,10 +1,8 @@
 <template lang="html">
-    <div>
-        <div class="main-content-wrap">
-            <article-list :articles="articleList" v-if="!$loadingRouteData"></article-list>
-            <pagination :routename="home" :params="data.path" :cur="data._page" :total="data._totalPage" v-if="!$loadingRouteData"></pagination>
-            <loading v-if="$loadingRouteData"></loading>
-        </div>
+    <div class="main-content-wrap">
+        <article-list :articles="articleList" v-if="!$loadingRouteData"></article-list>
+        <pagination :routename="home" :params="data.path" :cur="data._page" :total="data._totalPage" v-if="!$loadingRouteData"></pagination>
+        <loading v-if="$loadingRouteData"></loading>
     </div>
 </template>
 
