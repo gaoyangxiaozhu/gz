@@ -123,6 +123,7 @@ export default {
 
     position: fixed;
     top: 0;
+    left: 0;
 
     border: 1px solid #eef2f8;
     background-color: #FFFFFF;
@@ -134,11 +135,14 @@ export default {
     }
 }
 #main{
-    position: relative;
-    padding-top: 70px;
     display: block;
+    position: relative;
+    left: 0;
+
+    padding-top: 70px;
     width: 100%;
     min-height: 100%;
+    
     transition: left .2s ease-in;
 
     @media only screen and (max-width: #{$screen-sm-min}){
