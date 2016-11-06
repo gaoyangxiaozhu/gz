@@ -39,7 +39,7 @@ export default {
 @import "../../assets/css/variable";
 
 .header{
-    
+
     height: $default-navbar-height;
 
     color: $base-title-color;
@@ -70,6 +70,7 @@ export default {
         padding: 0;
         a{
             color: #7A7E83;
+            font-weight: 400;
             &:hover{
                 color: darken(#7A7E83, 10%);
             }
