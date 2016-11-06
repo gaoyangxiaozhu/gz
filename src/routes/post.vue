@@ -34,7 +34,6 @@ export default {
 
             loadJSON(dataURL)
             .then((data) => {
-                console.log(data)
                 this.article = data.data
                 transition.next()
             })

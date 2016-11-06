@@ -42,8 +42,6 @@ function loadScript(url) {
 function loadJSON(url) {
     return new Promise(function(resolve, reject){
 
-        console.log('url: ' + url)
-        console.log(cache[url])
         let cached
         if((cached = cache[url]))
             return setTimeout(() => resolve({
