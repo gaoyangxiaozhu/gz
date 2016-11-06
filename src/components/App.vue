@@ -155,14 +155,14 @@ export default {
         float: right;
         width: calc(100% - #{$default-md-sidebar-width});
         padding-top: 30px;
-        left: -$default-md-sidebar-width;
+        left: -$default-md-sidebar-width/2;
 
     }
     @media only screen and (min-width: #{$screen-md-min}){
         float: right;
         width: calc(100% - #{$default-lg-sidebar-width});
         padding-top: 30px;
-        left: -$default-lg-sidebar-width;
+        left: -$default-lg-sidebar-width/2;
     }
 }
 
