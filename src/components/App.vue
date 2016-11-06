@@ -8,9 +8,9 @@
         </div>
         <div id="main">
             <router-view></router-view>
-            <div id="footer" class="main-content-wrap">
+            <!-- <div id="footer" class="main-content-wrap">
                 <foot></foot>
-            </div>
+            </div> -->
         </div>
 
         <div id="onside" @click.stop="toggleSide" :class="{ 'right': !showSide }">
