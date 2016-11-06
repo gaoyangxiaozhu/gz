@@ -1029,17 +1029,12 @@
   -webkit-transform: translate3d(240px, 0, 0);
           transform: translate3d(240px, 0, 0); }
 
-.show-side #blog {
-  overflow: hidden; }
-
 .show-side #mask {
   opacity: 0.3;
   pointer-events: all;
   z-index: 2; }
 
 @media only screen and (min-width: 768px) {
-  .show-side #blog {
-    overflow: auto; }
   .show-side #mask {
     display: none; } }
 
@@ -3610,6 +3605,9 @@ body {
   font-size: 1.5rem;
   line-height: 1.85em;
   font-smoothing: subpixel-antialiased; }
+  @media only screen and (max-width: 768px) {
+    body {
+      overflow-x: hidden; } }
 
 html,
 body,
@@ -3764,9 +3762,6 @@ dl, ol, p, ul {
   width: 100%;
   top: 0;
   left: 0; }
-  @media only screen and (min-width: 768px) {
-    #blog {
-      overflow: auto; } }
 
 @media only screen and (max-width: 768px) {
   body.show-side {

@@ -247,9 +247,6 @@ export default {
     #main{
         transform: translate3d(#{$default-sidebar-width}, 0, 0);
     }
-    #blog{
-        overflow: hidden;
-    }
     #mask{
         opacity: 0.3;
         pointer-events: all;
@@ -257,9 +254,6 @@ export default {
     }
 
     @media only screen and (min-width: #{$screen-sm-min}){
-        #blog{
-            overflow: auto;
-        }
         #mask{
             display: none;
         }
