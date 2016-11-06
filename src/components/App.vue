@@ -115,7 +115,7 @@ export default {
 #header{
     display: block;
     height: 55px;
-    width: 200px;
+    width: 100%;
     overflow: hidden;
 
     position: fixed;

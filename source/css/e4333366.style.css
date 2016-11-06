@@ -918,7 +918,7 @@
 #header {
   display: block;
   height: 55px;
-  width: 200px;
+  width: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -3759,7 +3759,8 @@ dl, ol, p, ul {
 #blog {
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 90%;
+  border: 1px solid #d9d9d9;
   top: 0;
   left: 0; }
 
