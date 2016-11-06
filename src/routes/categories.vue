@@ -1,8 +1,11 @@
 <template lang="html">
-    <div class="main-content-wrap">
-        <article-title-list base="category" :data="categories" v-if="!$loadingRouteData"></article-title-list>
-        <loading v-if="$loadingRouteData"></loading>
+    <div>
+        <div class="main-content-wrap">
+            <article-title-list base="category" :data="categories" v-if="!$loadingRouteData"></article-title-list>
+            <loading v-if="$loadingRouteData"></loading>
+        </div>
     </div>
+
 </template>
 
 <script>
