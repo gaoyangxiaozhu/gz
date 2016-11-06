@@ -126,7 +126,7 @@ export default {
     background-color: #FFFFFF;
 
     z-index:2;
-    transition: all .25s ease-in-out;
+    transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
     @media only screen and (min-width: #{$screen-sm-min}){
         display: none;
     }
@@ -137,7 +137,7 @@ export default {
     display: block;
     width: 100%;
     min-height: 100%;
-    transition: all .25s ease-in-out;
+    transition: left .2s cubic-bezier(0.4, 0, 0.2, 1);
 
     @media only screen and (max-width: #{$screen-sm-min}){
         overflow-x: hidden;
@@ -170,7 +170,7 @@ export default {
 
     padding: 0 0px;
 
-    transition: all .2s ease-in-out;
+    transition: left .2s cubic-bezier(0.4, 0, 0.2, 1);
 
     z-index: 3;
 
