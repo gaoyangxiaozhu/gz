@@ -1,4 +1,5 @@
 <template lang="html">
+    {{ width }}
     <div v-cloak>
         <div id="header" v-bind:style="headStyle">
             <myhead></myhead>
@@ -7,6 +8,9 @@
             <sidebar></sidebar>
         </div>
         <div id="main">
+            <div class="">
+                {{ width }}
+            </div>
             <router-view></router-view>
             <div id="footer" class="main-content-wrap">
                 <foot></foot>
@@ -37,6 +41,7 @@ export default {
     data () {
         return {
             showSide : false,
+            width: 0,
             headStyle: {}
         }
     },
@@ -102,7 +107,9 @@ export default {
                 document.body.classList ? document.body.classList.add('show-side') : document.body.className='show-side'
             }else{
                 document.body.classList ? document.body.classList.remove('show-side') : document.body.className='show-side'
+
             }
+            this.width = document.body.clientWidth || document.documentElement.width
         },
     },
     components: { Foot, Sidebar, Myhead }
@@ -286,7 +293,7 @@ export default {
 #mask{
     position: fixed;
     top: 0;
-    width: 260px;
+    width: 100%;
     height: 100%;
 
     z-index:0;
