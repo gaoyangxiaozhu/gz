@@ -251,6 +251,7 @@ export default {
         left: $default-sidebar-width;
     }
     #mask{
+        visibility: visible;
         opacity: 0.5;
         pointer-events: all;
     }
@@ -289,7 +290,7 @@ export default {
     background-color: #000;
     opacity: 0;
 
-
+    visibility: hidden;
     pointer-events: none;
 
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
