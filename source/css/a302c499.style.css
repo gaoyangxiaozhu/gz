@@ -944,7 +944,7 @@
   padding-top: 70px;
   display: block;
   width: 100%;
-  min-width: 100%;
+  min-height: 100%;
   -webkit-transition: -webkit-transform .25s ease-in-out;
   transition: -webkit-transform .25s ease-in-out;
   transition: transform .25s ease-in-out;

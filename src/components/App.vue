@@ -135,7 +135,7 @@ export default {
     padding-top: 70px;
     display: block;
     width: 100%;
-    min-width: 100%;
+    min-height: 100%;
     transition: transform .25s ease-in-out;
 
     @media only screen and (max-width: #{$screen-sm-min}){
