@@ -3,6 +3,11 @@ html{
     background-color: $base-bg-color;
     font-family: "open_sans", "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-size: 62.5%; /* 10 / 16 * 100% , default 10px*/
+
+    @media only screen and (max-width: #{$screen-sm-min}){
+        overflow:hidden;
+        overflow-y:auto;
+    }
 }
 
 body{
@@ -16,10 +21,6 @@ body{
     line-height: 1.85em;
 
     font-smoothing: subpixel-antialiased;
-
-    @media only screen and (max-width: #{$screen-sm-min}){
-        overflow-x: hidden;
-    }
 }
 
 html,

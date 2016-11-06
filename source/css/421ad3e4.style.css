@@ -3592,6 +3592,11 @@ html {
   font-family: "open_sans", "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 62.5%;
   /* 10 / 16 * 100% , default 10px*/ }
+  @media only screen and (max-width: 768px) {
+    body,
+    html {
+      overflow: hidden;
+      overflow-y: auto; } }
 
 body {
   width: 100%;
@@ -3602,9 +3607,6 @@ body {
   font-size: 1.5rem;
   line-height: 1.85em;
   font-smoothing: subpixel-antialiased; }
-  @media only screen and (max-width: 768px) {
-    body {
-      overflow-x: hidden; } }
 
 html,
 body,
