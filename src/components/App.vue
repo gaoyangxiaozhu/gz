@@ -170,6 +170,8 @@ export default {
     font-size: 1.6rem;
     background-color: #FFFFFF; //#B6B6B6
 
+    border-right: 1px solid $base-bd-color;
+
     padding: 0 0px;
 
     transition: left .2s ease-in;
@@ -188,6 +190,7 @@ export default {
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         padding: 0 10px;
 
+        border: none;
         width: $default-md-sidebar-width;
         left: -$default-md-sidebar-width;
     }
@@ -256,8 +259,6 @@ export default {
         left: $default-sidebar-width;
     }
     #mask{
-        visibility: visible;
-        opacity: 0.5;
         pointer-events: all;
     }
 
@@ -295,7 +296,6 @@ export default {
     background-color: #000;
     opacity: 0;
 
-    visibility: hidden;
     pointer-events: none;
 
     transition: opacity 0.2s ease-in;

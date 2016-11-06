@@ -963,6 +963,7 @@
   text-align: center;
   font-size: 1.6rem;
   background-color: #FFFFFF;
+  border-right: 1px solid #d9d9d9;
   padding: 0 0px;
   -webkit-transition: left .2s ease-in;
   transition: left .2s ease-in;
@@ -974,6 +975,7 @@
   @media only screen and (max-width: 992px) and (min-width: 768px) {
     #sidebar {
       padding: 0 10px;
+      border: none;
       width: 100px;
       left: -100px; } }
   @media only screen and (min-width: 992px) {
@@ -1023,8 +1025,6 @@
   left: 240px; }
 
 .show-side #mask {
-  visibility: visible;
-  opacity: 0.5;
   pointer-events: all; }
 
 @media only screen and (min-width: 768px) {
@@ -1053,7 +1053,6 @@
   overflow: hidden;
   background-color: #000;
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
   -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in; }
