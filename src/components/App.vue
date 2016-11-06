@@ -129,7 +129,7 @@ export default {
     background-color: #FFFFFF;
 
     z-index: 3;
-    transition: all .2s ease-in;
+    transition: all .2s cubic-bezier(.4,0,.2,1);
     @media only screen and (min-width: #{$screen-sm-min}){
         display: none;
     }
@@ -142,8 +142,8 @@ export default {
     padding-top: 70px;
     width: 100%;
     min-height: 100%;
-    
-    transition: left .2s ease-in;
+
+    transition: left .2s cubic-bezier(.4,0,.2,1);
 
     @media only screen and (max-width: #{$screen-sm-min}){
         overflow-x: hidden;
@@ -178,7 +178,7 @@ export default {
 
     padding: 0 0px;
 
-    transition: left .2s ease-in;
+    transition: left .2s cubic-bezier(.4,0,.2,1);
 
     z-index: 4;
 
@@ -302,7 +302,7 @@ export default {
 
     pointer-events: none;
 
-    transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s cubic-bezier(.4,0,.2,1);
 
     @media only screen and (min-width: #{screen-sm-min}){
         display: none;

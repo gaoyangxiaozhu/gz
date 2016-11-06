@@ -926,8 +926,8 @@
   border: 1px solid #eef2f8;
   background-color: #FFFFFF;
   z-index: 3;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in; }
+  -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
   @media only screen and (min-width: 768px) {
     #header {
       display: none; } }
@@ -939,8 +939,8 @@
   padding-top: 70px;
   width: 100%;
   min-height: 100%;
-  -webkit-transition: left .2s ease-in;
-  transition: left .2s ease-in; }
+  -webkit-transition: left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
   @media only screen and (max-width: 768px) {
     #main {
       overflow-x: hidden; } }
@@ -967,8 +967,8 @@
   background-color: #FFFFFF;
   border-right: 1px solid #d9d9d9;
   padding: 0 0px;
-  -webkit-transition: left .2s ease-in;
-  transition: left .2s ease-in;
+  -webkit-transition: left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 4;
   width: 240px;
   left: -240px;
@@ -1056,8 +1056,8 @@
   background-color: #000;
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: opacity 0.2s ease-in;
-  transition: opacity 0.2s ease-in; }
+  -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
   @media only screen and (min-width: screen-sm-min) {
     #mask {
       display: none; } }
