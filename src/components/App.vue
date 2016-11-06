@@ -8,9 +8,9 @@
         </div>
         <div id="main">
             <router-view></router-view>
-            <!-- <div id="footer" class="main-content-wrap">
+            <div id="footer" class="main-content-wrap">
                 <foot></foot>
-            </div> -->
+            </div>
         </div>
 
         <div id="onside" @click.stop="toggleSide" :class="{ 'right': !showSide }">
@@ -126,21 +126,20 @@ export default {
     background-color: #FFFFFF;
 
     z-index:2;
-    transition: transform .25s ease-in-out;
+    transition: all .25s ease-in-out;
     @media only screen and (min-width: #{$screen-sm-min}){
         display: none;
     }
 }
 #main{
-
+    position: relative;
     padding-top: 70px;
     display: block;
     width: 100%;
     min-height: 100%;
-    transition: transform .25s ease-in-out;
+    transition: all .25s ease-in-out;
 
     @media only screen and (max-width: #{$screen-sm-min}){
-        transform: translateZ(0) translate(0, 0);
         overflow-x: hidden;
     }
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
@@ -148,14 +147,14 @@ export default {
         float: right;
         width: calc(100% - #{$default-md-sidebar-width});
         padding-top: 30px;
-        transform : translateZ(0 )translate(-#{$default-md-sidebar-width}, 0);
+        left: -$default-md-sidebar-width;
 
     }
     @media only screen and (min-width: #{$screen-md-min}){
         float: right;
         width: calc(100% - #{$default-lg-sidebar-width});
         padding-top: 30px;
-        transform : translateZ(0) translate(-#{$default-lg-sidebar-width}, 0);
+        left: -$default-lg-sidebar-width;
     }
 }
 
@@ -171,7 +170,7 @@ export default {
 
     padding: 0 0px;
 
-    transition: transform .25s ease-in-out;
+    transition: all .2s ease-in-out;
 
     z-index: 3;
 
@@ -179,11 +178,12 @@ export default {
     left: -$default-sidebar-width;
     width: $default-sidebar-width;
 
+    transform: translateZ(0);
 
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
-        left: 0;
         padding: 0 10px;
-        transform: translateZ(0) translate(-#{$default-md-sidebar-width}, 0);
+
+        left: -$default-md-sidebar-width;
         width: $default-md-sidebar-width;
     }
 
@@ -193,15 +193,13 @@ export default {
 
         border-right: 1px solid $base-bd-color;
 
-        transform: translateZ(0) translate(-#{$default-lg-sidebar-width}, 0);
+        left: -$default-lg-sidebar-width;
         width: $default-lg-sidebar-width;
     }
 
 
 }
 #onside{
-
-
 
     //default not show
     display: none;
@@ -245,10 +243,12 @@ export default {
 
 }
 .show-side{
+    #sidebar{
+        left: 0;
+    }
     #header,
-    #sidebar,
     #main{
-        transform: translate3d(#{$default-sidebar-width}, 0, 0);
+        left: $default-sidebar-width;
     }
     #mask{
         opacity: 0.3;
@@ -260,23 +260,15 @@ export default {
         #mask{
             display: none;
         }
-    }
-
-    @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
-        #sidebar,
         #main{
-            transform : translate3d(0, 0, 0);
+            left: 0;
         }
     }
     @media only screen and (min-width: #{$screen-md-min}){
-        #sidebar,
         #main{
-            transform: translate3d(0, 0, 0);
+            left: 0;
         }
-
     }
-
-
 }
 #footer{
     color: #9eabb3;

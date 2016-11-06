@@ -5,9 +5,9 @@ html{
     font-size: 62.5%; /* 10 / 16 * 100% , default 10px*/
 
     @media only screen and (max-width: #{$screen-sm-min}){
-        overflow:hidden;
-        overflow-y:auto;
+        overflow-x:hidden;
     }
+
 }
 
 body{
@@ -21,6 +21,8 @@ body{
     line-height: 1.85em;
 
     font-smoothing: subpixel-antialiased;
+
+
 }
 
 html,
