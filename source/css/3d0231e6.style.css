@@ -271,6 +271,8 @@
 
 
 
+
+
 @charset "UTF-8";
 /************navbar*************/
 .post-main .post {
@@ -1230,8 +1232,6 @@
           width: 40px; } }
 /************navbar*************/
 .header {
-  position: absolute;
-  width: 100%;
   height: 55px;
   color: #4a4a4a;
   -webkit-transform: translate(0, 0);

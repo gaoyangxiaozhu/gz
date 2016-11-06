@@ -29,15 +29,17 @@ export default {
                 name
             } = this.$route.params
             let dataURL = [parseInt(year), parseInt(month), parseInt(day), name].map((item) => typeof item === 'number' ? pad(item, 2) : item).join('/')
+
             dataURL = `./async/posts/${dataURL}.json`
 
             loadJSON(dataURL)
             .then((data) => {
+                console.log(data)
                 this.article = data.data
                 transition.next()
             })
             .catch((error) => {
-                console.log(error.message)
+                console.log(`message: ${error.message || error}`)
                 transition.next()
             })
         }

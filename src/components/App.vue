@@ -89,8 +89,9 @@ export default {
             event.stopPropagation()
         })
         //init sider position
+        const activeLink = selfPageBtn.querySelector('li.active') || selfPageBtn.querySelector('li')
         transformList.forEach((name) => {
-            slider['style'][name] = `translate(0, ${selfPageBtn.querySelector('li.active').offsetTop}px)`
+            slider['style'][name] = `translate(0, ${activeLink.offsetTop}px)`
         })
 
     },

@@ -39,9 +39,7 @@ export default {
 @import "../../assets/css/variable";
 
 .header{
-    position: absolute;
     
-    width: 100%;
     height: $default-navbar-height;
 
     color: $base-title-color;
