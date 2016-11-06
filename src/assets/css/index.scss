@@ -14,7 +14,7 @@
     // perspective-origin: center;
     // perspective:2000px;
 
-    overflow-x: hidden;
+    // overflow-x: hidden;
     @media only screen and (min-width: #{$screen-sm-min}){
         overflow: auto;
     }

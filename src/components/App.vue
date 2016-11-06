@@ -50,7 +50,7 @@ export default {
         window.addEventListener('scroll', (event) => {
             const toTop = parseInt(document.documentElement.scrollTop || document.body.scrollTop)
             if(!this.showSide){
-                if(toTop > 55){
+                if(toTop > 45){
                     transformList.forEach((name) => {
 
                         this.headStyle[name] = 'translate3d(0, -55px, 0)'
@@ -87,6 +87,10 @@ export default {
             })
             event.preventDefault()
             event.stopPropagation()
+        })
+        //init sider position
+        transformList.forEach((name) => {
+            slider['style'][name] = `translate(0, ${selfPageBtn.querySelector('li.active').offsetTop}px)`
         })
 
     },
