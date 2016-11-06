@@ -77,9 +77,11 @@ export default {
             const target = event.target
             btnList.forEach((item, index) => {
                 if(target == item || target.parentNode == item || (target.parentNode && target.parentNode.parentNode == item)){
-                    transformList.forEach((name) => {
-                        slider['style'][name] = `translate(0, ${item.offsetTop}px)`
-                    })
+                    if(parseInt(document.body.clientWidth || document.documentElement.clientWidth) >=  768){
+                        transformList.forEach((name) => {
+                            slider['style'][name] = `translate(0, ${item.offsetTop}px)`
+                        })
+                    }
                     if(parseInt(document.body.clientWidth || document.documentElement.clientWidth) <  768){
                         this.toggleSide()
                     }
@@ -126,7 +128,7 @@ export default {
     background-color: #FFFFFF;
 
     z-index: 3;
-    transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all .2s ease-in;
     @media only screen and (min-width: #{$screen-sm-min}){
         display: none;
     }
@@ -137,7 +139,7 @@ export default {
     display: block;
     width: 100%;
     min-height: 100%;
-    transition: left .2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: left .2s ease-in;
 
     @media only screen and (max-width: #{$screen-sm-min}){
         overflow-x: hidden;
@@ -170,7 +172,7 @@ export default {
 
     padding: 0 0px;
 
-    transition: left .2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: left .2s ease-in;
 
     z-index: 4;
 
@@ -181,9 +183,7 @@ export default {
     //Prevent jitter
     transform: translateZ(0);
 
-    @media only screen and (max-width: #{$screen-sm-min}){
-        visibility: hidden;
-    }
+
 
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         padding: 0 10px;
@@ -250,10 +250,6 @@ export default {
 .show-side{
     #sidebar{
         left: 0;
-
-        @media only screen and (max-width: #{$screen-sm-min}){
-            visibility: visible;
-        }
     }
     #header,
     #main{
@@ -302,7 +298,7 @@ export default {
     visibility: hidden;
     pointer-events: none;
 
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.2s ease-in;
 
     @media only screen and (min-width: #{screen-sm-min}){
         display: none;
