@@ -82,6 +82,7 @@ export default {
                             slider['style'][name] = `translate(0, ${item.offsetTop}px)`
                         })
                     }
+                    //hide the sidebar after click the button when width < 768
                     if(parseInt(document.body.clientWidth || document.documentElement.clientWidth) <  768){
                         this.toggleSide()
                     }
