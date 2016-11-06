@@ -39,7 +39,8 @@ export default {
 @import "../../assets/css/variable";
 
 .header{
-    padding: 0 20px;
+    position: absolute;
+    
     width: 100%;
     height: $default-navbar-height;
 
@@ -50,9 +51,11 @@ export default {
     overflow: hidden;
     &--btn{
         position: absolute;
+        left: 20px;
         height: $default-navbar-height;
         line-height: $default-navbar-height;
         font-size: 2rem;
+
 
         color: #7A7E83;
         &:hover,

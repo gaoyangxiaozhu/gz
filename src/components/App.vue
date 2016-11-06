@@ -135,8 +135,6 @@ export default {
     display: block;
     width: 100%;
 
-    transform-origin: left;
-
     transition: transform .25s ease-in-out;
 
     @media only screen and (max-width: #{$screen-sm-min}){
@@ -171,7 +169,6 @@ export default {
 
     padding: 0 0px;
 
-    transform-origin: right;
     transition: transform .25s ease-in-out;
 
     z-index: 3;
@@ -297,6 +294,7 @@ export default {
     width: 100%;
     height: 100%;
 
+    z-index:0;
     overflow-x: hidden;
     transform: translate3d(0, 0, 0);
     background-color: #000;
