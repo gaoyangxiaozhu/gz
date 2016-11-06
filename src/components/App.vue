@@ -125,7 +125,7 @@ export default {
     border: 1px solid #eef2f8;
     background-color: #FFFFFF;
 
-    z-index:2;
+    z-index: 3;
     transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
     @media only screen and (min-width: #{$screen-sm-min}){
         display: none;
@@ -172,12 +172,13 @@ export default {
 
     transition: left .2s cubic-bezier(0.4, 0, 0.2, 1);
 
-    z-index: 3;
+    z-index: 4;
 
     //default
-    left: -$default-sidebar-width;
     width: $default-sidebar-width;
+    left: -$default-sidebar-width;
 
+    //Prevent jitter
     transform: translateZ(0);
 
     @media only screen and (max-width: #{$screen-sm-min}){
@@ -187,8 +188,8 @@ export default {
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         padding: 0 10px;
 
-        left: -$default-md-sidebar-width;
         width: $default-md-sidebar-width;
+        left: -$default-md-sidebar-width;
     }
 
     @media only screen and (min-width: #{$screen-md-min}){
@@ -197,8 +198,8 @@ export default {
 
         border-right: 1px solid $base-bd-color;
 
-        left: -$default-lg-sidebar-width;
         width: $default-lg-sidebar-width;
+        left: -$default-lg-sidebar-width;
     }
 
 
@@ -293,7 +294,7 @@ export default {
     left: 0;
     right: 0;
 
-    z-index: 2;
+    z-index: 3;
     overflow: hidden;
     background-color: #000;
     opacity: 0;
