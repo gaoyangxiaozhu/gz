@@ -918,7 +918,7 @@
 #header {
   display: block;
   height: 55px;
-  width: 200px;
+  width: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -941,8 +941,7 @@
   -webkit-transition: -webkit-transform .25s ease-in-out;
   transition: -webkit-transform .25s ease-in-out;
   transition: transform .25s ease-in-out;
-  transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
-  border: 1px solid #c17272; }
+  transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out; }
   @media only screen and (max-width: 768px) {
     #main {
       -webkit-transform: translateZ(0) translate(0, 0);
@@ -1060,7 +1059,7 @@
 #mask {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 260px;
   height: 100%;
   z-index: 0;
   overflow-x: hidden;
@@ -3757,7 +3756,7 @@ dl, ol, p, ul {
 #blog {
   position: absolute;
   height: 100%;
-  width: 90%;
+  width: 100%;
   border: 1px solid #d9d9d9;
   top: 0;
   left: 0; }

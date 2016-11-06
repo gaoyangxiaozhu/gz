@@ -115,7 +115,7 @@ export default {
 #header{
     display: block;
     height: 55px;
-    width: 200px;
+    width: 100%;
     overflow: hidden;
 
     position: fixed;
@@ -138,7 +138,6 @@ export default {
     min-height: 100%;
     transition: transform .25s ease-in-out;
 
-    border: 1px solid rgb(193, 114, 114);
     @media only screen and (max-width: #{$screen-sm-min}){
         transform: translateZ(0) translate(0, 0);
         overflow-x: hidden;
@@ -287,7 +286,7 @@ export default {
 #mask{
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 260px;
     height: 100%;
 
     z-index:0;
