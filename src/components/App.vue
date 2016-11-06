@@ -201,28 +201,30 @@ export default {
 }
 #onside{
 
-    position: fixed;
 
-    top: 30px;
-    left: 200px;
-
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    opacity: 0.9;
-
-    text-align: center;
-    font-size: 2rem;
-
-    color: #626262;
-    z-index: -1;
-
-    cursor: pointer;
 
     //default not show
     display: none;
 
+    @media only screen and (min-width: #{$screen-sm-min}){
+        position: fixed;
 
+        top: 30px;
+        left: 200px;
+
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        opacity: 0.9;
+
+        text-align: center;
+        font-size: 2rem;
+
+        color: #626262;
+        z-index: -1;
+
+        cursor: pointer;
+    }
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         z-index: 4;
         display: block;
@@ -291,7 +293,7 @@ export default {
     height: 100%;
 
     z-index:0;
-    overflow-x: hidden;
+    overflow: hidden;
     transform: translate3d(0, 0, 0);
     background-color: #000;
     opacity: 0;
