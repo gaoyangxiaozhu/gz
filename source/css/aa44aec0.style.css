@@ -3601,7 +3601,8 @@ body {
 html,
 body,
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
 
 ul,
 li,
