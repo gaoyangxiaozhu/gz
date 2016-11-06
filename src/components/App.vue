@@ -131,6 +131,7 @@ export default {
 
     z-index: 3;
     transition: all .2s cubic-bezier(.4,0,.2,1);
+
     @media only screen and (min-width: #{$screen-sm-min}){
         display: none;
     }
@@ -266,7 +267,11 @@ export default {
     #mask{
         pointer-events: all;
     }
-
+    @media only screen and (max-width: #{$screen-sm-min}){
+        #header{
+            border-left: none;
+        }
+    }
     @media only screen and (min-width: #{$screen-sm-min}){
         #mask{
             display: none;
