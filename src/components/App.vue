@@ -251,7 +251,7 @@ export default {
         left: $default-sidebar-width;
     }
     #mask{
-        opacity: 0.3;
+        opacity: 0.5;
         pointer-events: all;
         z-index:2;
     }
@@ -292,6 +292,8 @@ export default {
 
 
     pointer-events: none;
+
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
     @media only screen and (min-width: #{screen-sm-min}){
         display: none;

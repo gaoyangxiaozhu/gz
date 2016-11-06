@@ -1023,7 +1023,7 @@
   left: 240px; }
 
 .show-side #mask {
-  opacity: 0.3;
+  opacity: 0.5;
   pointer-events: all;
   z-index: 2; }
 
@@ -1054,7 +1054,9 @@
           transform: translate3d(0, 0, 0);
   background-color: #000;
   opacity: 0;
-  pointer-events: none; }
+  pointer-events: none;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
   @media only screen and (min-width: screen-sm-min) {
     #mask {
       display: none; } }
