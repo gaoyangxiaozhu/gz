@@ -180,6 +180,10 @@ export default {
 
     transform: translateZ(0);
 
+    @media only screen and (max-width: #{$screen-sm-min}){
+        visibility: hidden;
+    }
+
     @media only screen and (max-width: #{$screen-md-min}) and (min-width: #{$screen-sm-min}){
         padding: 0 10px;
 
@@ -245,6 +249,10 @@ export default {
 .show-side{
     #sidebar{
         left: 0;
+
+        @media only screen and (max-width: #{$screen-sm-min}){
+            visibility: visible;
+        }
     }
     #header,
     #main{

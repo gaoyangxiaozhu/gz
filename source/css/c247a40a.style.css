@@ -971,6 +971,9 @@
   width: 240px;
   -webkit-transform: translateZ(0);
           transform: translateZ(0); }
+  @media only screen and (max-width: 768px) {
+    #sidebar {
+      visibility: hidden; } }
   @media only screen and (max-width: 992px) and (min-width: 768px) {
     #sidebar {
       padding: 0 10px;
@@ -1017,6 +1020,9 @@
 
 .show-side #sidebar {
   left: 0; }
+  @media only screen and (max-width: 768px) {
+    .show-side #sidebar {
+      visibility: visible; } }
 
 .show-side #header,
 .show-side #main {
