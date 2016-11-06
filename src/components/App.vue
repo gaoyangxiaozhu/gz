@@ -138,6 +138,7 @@ export default {
     min-height: 100%;
     transition: transform .25s ease-in-out;
 
+    border: 1px solid rgb(193, 114, 114);
     @media only screen and (max-width: #{$screen-sm-min}){
         transform: translateZ(0) translate(0, 0);
         overflow-x: hidden;
