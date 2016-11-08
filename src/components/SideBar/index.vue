@@ -247,9 +247,9 @@ export default {
             margin-left: 0.5rem;
             margin-bottom: 1rem;
             &:first-child{
-                margin-left: 1rem;
+                margin-left: 14.5px;
                 @media only screen and (min-width: #{$screen-sm-min}){
-                    margin-left: 0;
+                    margin-left: 3px;
                 }
             };
 
@@ -261,7 +261,7 @@ export default {
                 width: 36px;
 
                 border-radius: 6px;
-                border: 1px solid $base-bd-color;
+                border: 1px solid transparent;
 
                 font-size: 2rem;
 
@@ -269,6 +269,8 @@ export default {
                     height: 40px;
                     line-height: 40px;
                     width: 40px;
+
+                    border: 1px solid $base-bd-color;
 
                 }
             }
