@@ -532,7 +532,7 @@
   padding-left: 10px;
   overflow: auto;
   line-height: 1.5;
-  /*font-size: 0.96em;*/
+  font-size: 1.3rem;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   color: #4c4c4c;
   background-color: #f9f9f7;
@@ -552,7 +552,7 @@
   border-collapse: collapse;
   border-spacing: 0;
   margin-bottom: 1.5em;
-  font-size: 0.96em;
+  font-size: 1.3rem;
   box-sizing: border-box;
 }
 
