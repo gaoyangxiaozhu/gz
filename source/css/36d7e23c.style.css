@@ -1098,7 +1098,8 @@
 .sidebar .sidebar-nav--profile,
 .sidebar .sidebar-nav--profile .author {
   font-size: 1.9rem;
-  font-weight: 400px; }
+  font-weight: 400px;
+  display: inline-block; }
 
 .sidebar .sidebar-nav--profile .title {
   font-size: 1.4rem;

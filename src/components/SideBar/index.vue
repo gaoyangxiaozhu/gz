@@ -6,9 +6,9 @@
                 <div class="sidebar-nav--avatar">
                     <img class="avatar" alt="" :src="getConfig('theme/avatar')"/>
                 </div>
-                <p class="author">
+                <a class="author" href="{{ aboutme }}">
                     {{ author }}
-                </p>
+                </a>
                 <p class="title">
                     {{ title }}
                 </p>
@@ -56,6 +56,7 @@ export default {
     computed: {},
     created(){
         this.author = getConfig('global/author')
+        this.aboutme = getConfig('global/aboutme')
         this.title = getConfig('global/title')
         this.subtitle = getConfig('global/subtitle')
         this.buttonsmap = [
@@ -112,6 +113,8 @@ export default {
             .author{
                 font-size: 1.9rem;
                 font-weight: 400px;
+
+                display: inline-block;
             }
             .title{
                 font-size: 1.4rem;
